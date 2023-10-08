@@ -1,3 +1,79 @@
-PODFILE CHECKSUM: 5311e8348213a80e6fbc565514ba955e816be8d0
+PODS:
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.2.0)
+  - MYIconfont (0.1.0)
+  - MYImageCache (0.1.0):
+    - SDWebImage
+  - MYMVVM (0.1.0):
+    - Masonry
+    - MYIconfont
+    - MYImageCache
+    - MYRouter
+    - MYSkin
+    - MYUtils
+  - MYRouter (0.1.0)
+  - MYSkin (0.1.0):
+    - YYModel
+  - MYUtils (0.1.0):
+    - MBProgressHUD
+    - ReactiveObjC
+  - ReactiveObjC (3.1.1)
+  - SDWebImage (5.15.4):
+    - SDWebImage/Core (= 5.15.4)
+  - SDWebImage/Core (5.15.4)
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - MYIconfont (from `https://github.com/MYBasicUtils/MYIconfont.git`)
+  - MYImageCache (from `/Users/apple/Developer/iOS/MYImageCache`)
+  - MYMVVM (from `/Users/apple/Developer/iOS/MYMVVM`)
+  - MYRouter (from `https://github.com/MYBasicUtils/MYRouter.git`)
+  - MYSkin (from `/Users/apple/Developer/iOS/MYSkin`)
+  - MYUtils (from `/Users/apple/Developer/iOS/MYUtils`)
+
+SPEC REPOS:
+  trunk:
+    - Masonry
+    - MBProgressHUD
+    - ReactiveObjC
+    - SDWebImage
+    - YYModel
+
+EXTERNAL SOURCES:
+  MYIconfont:
+    :git: https://github.com/MYBasicUtils/MYIconfont.git
+  MYImageCache:
+    :path: "/Users/apple/Developer/iOS/MYImageCache"
+  MYMVVM:
+    :path: "/Users/apple/Developer/iOS/MYMVVM"
+  MYRouter:
+    :git: https://github.com/MYBasicUtils/MYRouter.git
+  MYSkin:
+    :path: "/Users/apple/Developer/iOS/MYSkin"
+  MYUtils:
+    :path: "/Users/apple/Developer/iOS/MYUtils"
+
+CHECKOUT OPTIONS:
+  MYIconfont:
+    :commit: 25a86bf7bcba6d352d7efb080b575e19eba37f84
+    :git: https://github.com/MYBasicUtils/MYIconfont.git
+  MYRouter:
+    :commit: 06c36db14506a66039f5ee35ecb1cd8a280d34c8
+    :git: https://github.com/MYBasicUtils/MYRouter.git
+
+SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MYIconfont: a328b874d9605267828243ec224fe56949dc90d4
+  MYImageCache: 3910c515f53da3f8fc5322ba3226506230176f8e
+  MYMVVM: 0d9f5c68de384c6a5cfd00eeabc63edb0ef09a09
+  MYRouter: e83ca93fb3d2aab45d4ece6e67e12c165b6486fa
+  MYSkin: 3b295a2469919edec5ceb28f62b2f12cee2c4eca
+  MYUtils: 1442f43627aec8fabf7b2f9ebb8c6be4ca687917
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  SDWebImage: 1c39de67663e5eebb2f41324d5d580eeea12dd4c
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: b78bb12caf96ded3af9c53d058b541e3eb939157
 
 COCOAPODS: 1.11.3
