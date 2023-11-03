@@ -2,7 +2,8 @@
 # platform :ios, '9.0'
 
 target 'DearIMProject' do
-  pod 'MYRouter', :git => 'https://github.com/MYBasicUtils/MYRouter.git'
+#  pod 'MYRouter', :git => 'https://github.com/MYBasicUtils/MYRouter.git'
+  pod 'MYRouter', :path => '/Users/apple/Developer/iOS/MYRouter'
   
 #  pod 'MYMVVM', :git => 'https://github.com/MYBasicUtils/MYMVVM.git'
   pod 'MYMVVM', :path => '/Users/apple/Developer/iOS/MYMVVM'
@@ -17,6 +18,10 @@ target 'DearIMProject' do
   pod 'MYSkin', :path => '/Users/apple/Developer/iOS/MYSkin'
   
   pod 'MYIconfont', :git => 'https://github.com/MYBasicUtils/MYIconfont.git'
+  
+  pod 'AFNetworking'
+  pod 'CocoaAsyncSocket'
+  
   
   target 'DearIMProjectTests' do
     inherit! :search_paths

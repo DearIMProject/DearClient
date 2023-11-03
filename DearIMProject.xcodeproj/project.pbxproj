@@ -8,8 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		0DDF37CBB73F35FD909B2A4C /* libPods-DearIMProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F27E43E8F2014C72234FECA /* libPods-DearIMProjectTests.a */; };
-		18CCD2A62AD29667000BEBB7 /* DILoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CCD2A42AD29667000BEBB7 /* DILoginViewController.m */; };
-		18CCD2A72AD29667000BEBB7 /* DILoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CCD2A52AD29667000BEBB7 /* DILoginViewController.xib */; };
+		180673E62AF34B2600175CB1 /* MYUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 180673E52AF34B2600175CB1 /* MYUserManager.m */; };
+		180673EF2AF34D6300175CB1 /* MYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 180673EE2AF34D6300175CB1 /* MYUser.m */; };
+		180673F32AF34F6600175CB1 /* MYViewController+MYRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 180673F22AF34F6600175CB1 /* MYViewController+MYRouter.m */; };
+		180673F72AF34FC400175CB1 /* MYApplicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 180673F62AF34FC400175CB1 /* MYApplicationManager.m */; };
+		180673FE2AF3709C00175CB1 /* MYForgetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180673FC2AF3709C00175CB1 /* MYForgetPwdViewController.m */; };
+		180673FF2AF3709C00175CB1 /* MYForgetPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180673FD2AF3709C00175CB1 /* MYForgetPwdViewController.xib */; };
+		180674032AF370D600175CB1 /* MYRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180674012AF370D600175CB1 /* MYRegisterViewController.m */; };
+		180674042AF370D600175CB1 /* MYRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180674022AF370D600175CB1 /* MYRegisterViewController.xib */; };
+		1806740A2AF3751D00175CB1 /* MYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 180674062AF3751C00175CB1 /* MYNetworkManager.m */; };
+		1806740B2AF3751D00175CB1 /* MYRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 180674072AF3751C00175CB1 /* MYRequest.m */; };
+		180674102AF3785E00175CB1 /* MYLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1806740F2AF3785E00175CB1 /* MYLoginService.m */; };
+		180674142AF37F2E00175CB1 /* MYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180674132AF37F2E00175CB1 /* MYHomeViewController.m */; };
+		1806741C2AF37FCB00175CB1 /* MYTestChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1806741A2AF37FCB00175CB1 /* MYTestChatViewController.m */; };
+		1806741D2AF37FCB00175CB1 /* MYTestChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1806741B2AF37FCB00175CB1 /* MYTestChatViewController.xib */; };
+		180674272AF3868400175CB1 /* MYSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 180674262AF3868400175CB1 /* MYSocketManager.m */; };
+		18C067412AF4926D00C3DE3D /* MYHomeTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C067402AF4926D00C3DE3D /* MYHomeTabbarViewController.m */; };
+		18C067442AF4929200C3DE3D /* MYChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C067432AF4929200C3DE3D /* MYChatListViewController.m */; };
+		18C067472AF492D900C3DE3D /* MYProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C067462AF492D900C3DE3D /* MYProfileViewController.m */; };
+		18C0674E2AF493B900C3DE3D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18C067502AF493B900C3DE3D /* InfoPlist.strings */; };
+		18CCD2A62AD29667000BEBB7 /* MYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CCD2A42AD29667000BEBB7 /* MYLoginViewController.m */; };
+		18CCD2A72AD29667000BEBB7 /* MYLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CCD2A52AD29667000BEBB7 /* MYLoginViewController.xib */; };
 		2115A3A03F84216643430032 /* libPods-DearIMProject-DearIMProjectUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6D4BC308E5C1B130A77CF22 /* libPods-DearIMProject-DearIMProjectUITests.a */; };
 		3812664A3D03127F01D53970 /* libPods-DearIMProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F21E6BDDF4D72EDA92137266 /* libPods-DearIMProject.a */; };
 		DEC9D96A2ABD8CB9007BB24F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC9D9692ABD8CB9007BB24F /* AppDelegate.m */; };
@@ -43,9 +62,49 @@
 
 /* Begin PBXFileReference section */
 		0F27E43E8F2014C72234FECA /* libPods-DearIMProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DearIMProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		18CCD2A32AD29667000BEBB7 /* DILoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DILoginViewController.h; sourceTree = "<group>"; };
-		18CCD2A42AD29667000BEBB7 /* DILoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DILoginViewController.m; sourceTree = "<group>"; };
-		18CCD2A52AD29667000BEBB7 /* DILoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DILoginViewController.xib; sourceTree = "<group>"; };
+		180673E42AF34B2600175CB1 /* MYUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYUserManager.h; sourceTree = "<group>"; };
+		180673E52AF34B2600175CB1 /* MYUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYUserManager.m; sourceTree = "<group>"; };
+		180673ED2AF34D6300175CB1 /* MYUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYUser.h; sourceTree = "<group>"; };
+		180673EE2AF34D6300175CB1 /* MYUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYUser.m; sourceTree = "<group>"; };
+		180673F12AF34F6600175CB1 /* MYViewController+MYRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MYViewController+MYRouter.h"; sourceTree = "<group>"; };
+		180673F22AF34F6600175CB1 /* MYViewController+MYRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MYViewController+MYRouter.m"; sourceTree = "<group>"; };
+		180673F52AF34FC400175CB1 /* MYApplicationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYApplicationManager.h; sourceTree = "<group>"; };
+		180673F62AF34FC400175CB1 /* MYApplicationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYApplicationManager.m; sourceTree = "<group>"; };
+		180673FB2AF3709C00175CB1 /* MYForgetPwdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYForgetPwdViewController.h; sourceTree = "<group>"; };
+		180673FC2AF3709C00175CB1 /* MYForgetPwdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYForgetPwdViewController.m; sourceTree = "<group>"; };
+		180673FD2AF3709C00175CB1 /* MYForgetPwdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MYForgetPwdViewController.xib; sourceTree = "<group>"; };
+		180674002AF370D600175CB1 /* MYRegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYRegisterViewController.h; sourceTree = "<group>"; };
+		180674012AF370D600175CB1 /* MYRegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYRegisterViewController.m; sourceTree = "<group>"; };
+		180674022AF370D600175CB1 /* MYRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MYRegisterViewController.xib; sourceTree = "<group>"; };
+		180674062AF3751C00175CB1 /* MYNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYNetworkManager.m; sourceTree = "<group>"; };
+		180674072AF3751C00175CB1 /* MYRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYRequest.m; sourceTree = "<group>"; };
+		180674082AF3751C00175CB1 /* MYRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYRequest.h; sourceTree = "<group>"; };
+		180674092AF3751D00175CB1 /* MYNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYNetworkManager.h; sourceTree = "<group>"; };
+		1806740E2AF3785E00175CB1 /* MYLoginService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYLoginService.h; sourceTree = "<group>"; };
+		1806740F2AF3785E00175CB1 /* MYLoginService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYLoginService.m; sourceTree = "<group>"; };
+		180674122AF37F2E00175CB1 /* MYHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYHomeViewController.h; sourceTree = "<group>"; };
+		180674132AF37F2E00175CB1 /* MYHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYHomeViewController.m; sourceTree = "<group>"; };
+		180674192AF37FCB00175CB1 /* MYTestChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYTestChatViewController.h; sourceTree = "<group>"; };
+		1806741A2AF37FCB00175CB1 /* MYTestChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYTestChatViewController.m; sourceTree = "<group>"; };
+		1806741B2AF37FCB00175CB1 /* MYTestChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MYTestChatViewController.xib; sourceTree = "<group>"; };
+		180674252AF3868400175CB1 /* MYSocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYSocketManager.h; sourceTree = "<group>"; };
+		180674262AF3868400175CB1 /* MYSocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYSocketManager.m; sourceTree = "<group>"; };
+		18C0673F2AF4926D00C3DE3D /* MYHomeTabbarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYHomeTabbarViewController.h; sourceTree = "<group>"; };
+		18C067402AF4926D00C3DE3D /* MYHomeTabbarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYHomeTabbarViewController.m; sourceTree = "<group>"; };
+		18C067422AF4929200C3DE3D /* MYChatListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYChatListViewController.h; sourceTree = "<group>"; };
+		18C067432AF4929200C3DE3D /* MYChatListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYChatListViewController.m; sourceTree = "<group>"; };
+		18C067452AF492D900C3DE3D /* MYProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYProfileViewController.h; sourceTree = "<group>"; };
+		18C067462AF492D900C3DE3D /* MYProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYProfileViewController.m; sourceTree = "<group>"; };
+		18C067482AF4937700C3DE3D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		18C067492AF4937800C3DE3D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		18C0674A2AF4937D00C3DE3D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		18C0674B2AF4937D00C3DE3D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		18C0674F2AF493B900C3DE3D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		18C067512AF493C200C3DE3D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		18C067522AF493C500C3DE3D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		18CCD2A32AD29667000BEBB7 /* MYLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYLoginViewController.h; sourceTree = "<group>"; };
+		18CCD2A42AD29667000BEBB7 /* MYLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYLoginViewController.m; sourceTree = "<group>"; };
+		18CCD2A52AD29667000BEBB7 /* MYLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MYLoginViewController.xib; sourceTree = "<group>"; };
 		319C92CEF69A92A5AC61710A /* Pods-DearIMProject-DearIMProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DearIMProject-DearIMProjectUITests.release.xcconfig"; path = "Target Support Files/Pods-DearIMProject-DearIMProjectUITests/Pods-DearIMProject-DearIMProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5186C6F51ED61DD5AA20560C /* Pods-DearIMProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DearIMProject.release.xcconfig"; path = "Target Support Files/Pods-DearIMProject/Pods-DearIMProject.release.xcconfig"; sourceTree = "<group>"; };
 		51EF8D631AA05A431D97D6DE /* Pods-DearIMProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DearIMProject.debug.xcconfig"; path = "Target Support Files/Pods-DearIMProject/Pods-DearIMProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,12 +160,111 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180673E32AF34B0900175CB1 /* UserUtils */ = {
+			isa = PBXGroup;
+			children = (
+				1806740D2AF3783B00175CB1 /* Services */,
+				180673E42AF34B2600175CB1 /* MYUserManager.h */,
+				180673E52AF34B2600175CB1 /* MYUserManager.m */,
+				180673ED2AF34D6300175CB1 /* MYUser.h */,
+				180673EE2AF34D6300175CB1 /* MYUser.m */,
+			);
+			path = UserUtils;
+			sourceTree = "<group>";
+		};
+		180673F02AF34F4400175CB1 /* MVVMCategory */ = {
+			isa = PBXGroup;
+			children = (
+				180673F12AF34F6600175CB1 /* MYViewController+MYRouter.h */,
+				180673F22AF34F6600175CB1 /* MYViewController+MYRouter.m */,
+			);
+			path = MVVMCategory;
+			sourceTree = "<group>";
+		};
+		180673F42AF34FB300175CB1 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				180673F52AF34FC400175CB1 /* MYApplicationManager.h */,
+				180673F62AF34FC400175CB1 /* MYApplicationManager.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		180674052AF3751C00175CB1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1806741E2AF3841900175CB1 /* Socket */,
+				180674062AF3751C00175CB1 /* MYNetworkManager.m */,
+				180674072AF3751C00175CB1 /* MYRequest.m */,
+				180674082AF3751C00175CB1 /* MYRequest.h */,
+				180674092AF3751D00175CB1 /* MYNetworkManager.h */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1806740C2AF3781F00175CB1 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				18CCD2A32AD29667000BEBB7 /* MYLoginViewController.h */,
+				18CCD2A42AD29667000BEBB7 /* MYLoginViewController.m */,
+				18CCD2A52AD29667000BEBB7 /* MYLoginViewController.xib */,
+				180673FB2AF3709C00175CB1 /* MYForgetPwdViewController.h */,
+				180673FC2AF3709C00175CB1 /* MYForgetPwdViewController.m */,
+				180673FD2AF3709C00175CB1 /* MYForgetPwdViewController.xib */,
+				180674002AF370D600175CB1 /* MYRegisterViewController.h */,
+				180674012AF370D600175CB1 /* MYRegisterViewController.m */,
+				180674022AF370D600175CB1 /* MYRegisterViewController.xib */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		1806740D2AF3783B00175CB1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1806740E2AF3785E00175CB1 /* MYLoginService.h */,
+				1806740F2AF3785E00175CB1 /* MYLoginService.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		180674112AF37E4000175CB1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				180674122AF37F2E00175CB1 /* MYHomeViewController.h */,
+				180674132AF37F2E00175CB1 /* MYHomeViewController.m */,
+				18C0673F2AF4926D00C3DE3D /* MYHomeTabbarViewController.h */,
+				18C067402AF4926D00C3DE3D /* MYHomeTabbarViewController.m */,
+				18C067422AF4929200C3DE3D /* MYChatListViewController.h */,
+				18C067432AF4929200C3DE3D /* MYChatListViewController.m */,
+				18C067452AF492D900C3DE3D /* MYProfileViewController.h */,
+				18C067462AF492D900C3DE3D /* MYProfileViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		180674152AF37F9A00175CB1 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				180674192AF37FCB00175CB1 /* MYTestChatViewController.h */,
+				1806741A2AF37FCB00175CB1 /* MYTestChatViewController.m */,
+				1806741B2AF37FCB00175CB1 /* MYTestChatViewController.xib */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		1806741E2AF3841900175CB1 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				180674252AF3868400175CB1 /* MYSocketManager.h */,
+				180674262AF3868400175CB1 /* MYSocketManager.m */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
 		18CCD2A22AD29633000BEBB7 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				18CCD2A32AD29667000BEBB7 /* DILoginViewController.h */,
-				18CCD2A42AD29667000BEBB7 /* DILoginViewController.m */,
-				18CCD2A52AD29667000BEBB7 /* DILoginViewController.xib */,
+				1806740C2AF3781F00175CB1 /* VCs */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -149,6 +307,12 @@
 		DEC9D9672ABD8CB9007BB24F /* DearIMProject */ = {
 			isa = PBXGroup;
 			children = (
+				180674152AF37F9A00175CB1 /* Test */,
+				180674112AF37E4000175CB1 /* Home */,
+				180674052AF3751C00175CB1 /* Networking */,
+				180673F42AF34FB300175CB1 /* Application */,
+				180673F02AF34F4400175CB1 /* MVVMCategory */,
+				180673E32AF34B0900175CB1 /* UserUtils */,
 				18CCD2A22AD29633000BEBB7 /* Login */,
 				DEC9D9682ABD8CB9007BB24F /* AppDelegate.h */,
 				DEC9D9692ABD8CB9007BB24F /* AppDelegate.m */,
@@ -161,6 +325,7 @@
 				DEC9D9762ABD8CBA007BB24F /* LaunchScreen.storyboard */,
 				DEC9D9792ABD8CBA007BB24F /* Info.plist */,
 				DEC9D97A2ABD8CBA007BB24F /* main.m */,
+				18C067502AF493B900C3DE3D /* InfoPlist.strings */,
 			);
 			path = DearIMProject;
 			sourceTree = "<group>";
@@ -282,6 +447,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = DEC9D95C2ABD8CB9007BB24F;
 			productRefGroup = DEC9D9662ABD8CB9007BB24F /* Products */;
@@ -301,9 +468,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEC9D9782ABD8CBA007BB24F /* LaunchScreen.storyboard in Resources */,
+				18C0674E2AF493B900C3DE3D /* InfoPlist.strings in Resources */,
+				1806741D2AF37FCB00175CB1 /* MYTestChatViewController.xib in Resources */,
 				DEC9D9752ABD8CBA007BB24F /* Assets.xcassets in Resources */,
 				DEC9D9732ABD8CB9007BB24F /* Main.storyboard in Resources */,
-				18CCD2A72AD29667000BEBB7 /* DILoginViewController.xib in Resources */,
+				180674042AF370D600175CB1 /* MYRegisterViewController.xib in Resources */,
+				18CCD2A72AD29667000BEBB7 /* MYLoginViewController.xib in Resources */,
+				180673FF2AF3709C00175CB1 /* MYForgetPwdViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,11 +603,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180673EF2AF34D6300175CB1 /* MYUser.m in Sources */,
+				180674102AF3785E00175CB1 /* MYLoginService.m in Sources */,
+				180673F72AF34FC400175CB1 /* MYApplicationManager.m in Sources */,
+				180673E62AF34B2600175CB1 /* MYUserManager.m in Sources */,
+				180674142AF37F2E00175CB1 /* MYHomeViewController.m in Sources */,
+				18C067442AF4929200C3DE3D /* MYChatListViewController.m in Sources */,
 				DEC9D9702ABD8CB9007BB24F /* ViewController.m in Sources */,
+				1806740A2AF3751D00175CB1 /* MYNetworkManager.m in Sources */,
+				180673F32AF34F6600175CB1 /* MYViewController+MYRouter.m in Sources */,
 				DEC9D96A2ABD8CB9007BB24F /* AppDelegate.m in Sources */,
-				18CCD2A62AD29667000BEBB7 /* DILoginViewController.m in Sources */,
+				18C067472AF492D900C3DE3D /* MYProfileViewController.m in Sources */,
+				18C067412AF4926D00C3DE3D /* MYHomeTabbarViewController.m in Sources */,
+				18CCD2A62AD29667000BEBB7 /* MYLoginViewController.m in Sources */,
+				1806741C2AF37FCB00175CB1 /* MYTestChatViewController.m in Sources */,
 				DEC9D97B2ABD8CBA007BB24F /* main.m in Sources */,
+				180674272AF3868400175CB1 /* MYSocketManager.m in Sources */,
+				180674032AF370D600175CB1 /* MYRegisterViewController.m in Sources */,
 				DEC9D96D2ABD8CB9007BB24F /* SceneDelegate.m in Sources */,
+				1806740B2AF3751D00175CB1 /* MYRequest.m in Sources */,
+				180673FE2AF3709C00175CB1 /* MYForgetPwdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,10 +659,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		18C067502AF493B900C3DE3D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18C0674F2AF493B900C3DE3D /* en */,
+				18C067512AF493C200C3DE3D /* zh-Hans */,
+				18C067522AF493C500C3DE3D /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		DEC9D9712ABD8CB9007BB24F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DEC9D9722ABD8CB9007BB24F /* Base */,
+				18C067482AF4937700C3DE3D /* zh-Hans */,
+				18C0674A2AF4937D00C3DE3D /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -485,6 +683,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				DEC9D9772ABD8CBA007BB24F /* Base */,
+				18C067492AF4937800C3DE3D /* zh-Hans */,
+				18C0674B2AF4937D00C3DE3D /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -497,6 +697,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -558,6 +759,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

@@ -1,4 +1,20 @@
 PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - CocoaAsyncSocket (7.6.5)
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
   - MYIconfont (0.1.0)
@@ -24,15 +40,19 @@ PODS:
   - YYModel (1.0.4)
 
 DEPENDENCIES:
+  - AFNetworking
+  - CocoaAsyncSocket
   - MYIconfont (from `https://github.com/MYBasicUtils/MYIconfont.git`)
   - MYImageCache (from `/Users/apple/Developer/iOS/MYImageCache`)
   - MYMVVM (from `/Users/apple/Developer/iOS/MYMVVM`)
-  - MYRouter (from `https://github.com/MYBasicUtils/MYRouter.git`)
+  - MYRouter (from `/Users/apple/Developer/iOS/MYRouter`)
   - MYSkin (from `/Users/apple/Developer/iOS/MYSkin`)
   - MYUtils (from `/Users/apple/Developer/iOS/MYUtils`)
 
 SPEC REPOS:
   trunk:
+    - AFNetworking
+    - CocoaAsyncSocket
     - Masonry
     - MBProgressHUD
     - ReactiveObjC
@@ -47,7 +67,7 @@ EXTERNAL SOURCES:
   MYMVVM:
     :path: "/Users/apple/Developer/iOS/MYMVVM"
   MYRouter:
-    :git: https://github.com/MYBasicUtils/MYRouter.git
+    :path: "/Users/apple/Developer/iOS/MYRouter"
   MYSkin:
     :path: "/Users/apple/Developer/iOS/MYSkin"
   MYUtils:
@@ -57,11 +77,10 @@ CHECKOUT OPTIONS:
   MYIconfont:
     :commit: 25a86bf7bcba6d352d7efb080b575e19eba37f84
     :git: https://github.com/MYBasicUtils/MYIconfont.git
-  MYRouter:
-    :commit: 06c36db14506a66039f5ee35ecb1cd8a280d34c8
-    :git: https://github.com/MYBasicUtils/MYRouter.git
 
 SPEC CHECKSUMS:
+  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
+  CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MYIconfont: a328b874d9605267828243ec224fe56949dc90d4
@@ -74,6 +93,6 @@ SPEC CHECKSUMS:
   SDWebImage: 1c39de67663e5eebb2f41324d5d580eeea12dd4c
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: b78bb12caf96ded3af9c53d058b541e3eb939157
+PODFILE CHECKSUM: cab5170920d0e18ca032bbe862138f3094192e61
 
 COCOAPODS: 1.11.3
