@@ -70,12 +70,12 @@ __MY_ROUTER_REGISTER__
                          success:^{
         @strongify(self);
         //TODO: wmy show success
-        [MBProgressHUD showSuccess:@"成功！"];
+        [MBProgressHUD showSuccess:@"成功！" toView:self.view];
         
     } failure:^(NSError * _Nonnull error) {
 //        @strongify(self);
         //TODO: wmy show error
-        [MBProgressHUD showSuccess:error.domain];
+        [MBProgressHUD showSuccess:error.domain toView:self.view];
     }];
     // 4. 失败 - 弹toast
 }

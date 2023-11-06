@@ -40,8 +40,17 @@
 }
 
 - (IBAction)onClickSend:(id)sender {
-    NSString *message = self.textView.text;
-    [TheSocket sendText:message];
+    NSString *messageStr = self.textView.text;
+    MYMessage *message = [[MYMessage alloc] init];
+    message.msgId = 11223344;
+    message.fromId = 11;
+    message.fromEntity = MYMessageEntiteyType_USER;
+    message.toId = 22;
+    message.toEntity = MYMessageEntiteyType_USER;
+    message.content = messageStr;
+    message.messageType = MYMessageType_TEXT;
+    message.timestamp = [[NSDate alloc] init].timeIntervalSince1970;
+    [TheSocket sendMessage:message];
 }
 
 #pragma mark - MYSocketManagerDelegate
@@ -50,16 +59,16 @@
     NSLog(@"连接成功！");
 }
 - (void)didConnectFailure:(MYSocketManager *)manager error:(NSError *)error {
-    
+    NSLog(@"连接失败！%@", error);
 }
 
 - (void)didWriteDataSuccess:(MYSocketManager *)manager {
     NSLog(@"发送成功");
 }
 
-- (void)didReceiveOnManager:(MYSocketManager *)manager message:(NSString *)message {
+- (void)didReceiveOnManager:(MYSocketManager *)manager message:(MYMessage *)message {
     NSLog(@"message = %@",message);
-    self.receiveLabel.text = message;
+    self.receiveLabel.text = message.content;
 }
 
 @end

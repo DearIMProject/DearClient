@@ -7,11 +7,13 @@
 
 #import "MYSocketManager.h"
 #import <CocoaAsyncSocket/GCDAsyncSocket.h>
+#import "MYMessageCodec.h"
 
 @interface MYSocketManager () <GCDAsyncSocketDelegate>
 
 @property (nonatomic, strong) GCDAsyncSocket *asyncSocket;
 @property (nonatomic, strong) NSMutableArray<id<MYSocketManagerDelegate>> *delegates;
+@property (nonatomic, strong) MYMessageCodec *msgCodec;
 
 @end
 
@@ -29,9 +31,10 @@ static MYSocketManager *__onetimeClass;
 - (instancetype)init {
     if (self = [super init]) {
         _asyncSocket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
-        
+        _msgCodec = [[MYMessageCodec alloc] init];
         _delegates = [NSMutableArray array];
         _host = @"127.0.0.1";
+        _port = 9999;
     }
     return self;
 }
@@ -52,7 +55,11 @@ static MYSocketManager *__onetimeClass;
 
 - (void)connect {
     NSError *error;
-    if (![_asyncSocket connectToHost:self.host onPort:8888 error:&error]) {
+    if ([_asyncSocket isConnected]) {
+        [_asyncSocket disconnectAfterReadingAndWriting];
+    }
+    
+    if (![_asyncSocket connectToHost:self.host onPort:self.port error:&error]) {
         for (id<MYSocketManagerDelegate> delegate in self.delegates) {
             if ([delegate respondsToSelector:@selector(didConnectFailure:error:)]) {
                 [delegate didConnectFailure:self error:error];
@@ -65,10 +72,8 @@ static MYSocketManager *__onetimeClass;
     [_asyncSocket disconnect];
 }
 
-- (void)sendText:(NSString *)text {
-    
-    NSData *sendData = [text dataUsingEncoding:NSUTF8StringEncoding];
-    [_asyncSocket writeData:sendData withTimeout:-1 tag:0];
+- (void)sendMessage:(MYMessage *)message {
+    [_asyncSocket writeData:[self.msgCodec encodeWithMessage:message] withTimeout:-1 tag:0];
 }
 
 
@@ -79,7 +84,7 @@ static MYSocketManager *__onetimeClass;
 }
 
 - (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(uint16_t)port {
-    if ([host isEqualToString:self.host] && port == 8888) {
+    if ([host isEqualToString:self.host] && port == self.port) {
         for (id<MYSocketManagerDelegate> delegate in self.delegates) {
             if ([delegate respondsToSelector:@selector(didConnectSuccess:)]) {
                 [delegate didConnectSuccess:self];
@@ -100,8 +105,9 @@ static MYSocketManager *__onetimeClass;
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag {
     for (id<MYSocketManagerDelegate> delegate in self.delegates) {
         if ([delegate respondsToSelector:@selector(didReceiveOnManager:message:)]) {
-            NSString* newStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            [delegate didReceiveOnManager:self message:newStr];
+//            NSString* newStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            
+            [delegate didReceiveOnManager:self message:[self.msgCodec decodeWithData:data]];
         }
     }
     [sock readDataWithTimeout:-1 tag:0];

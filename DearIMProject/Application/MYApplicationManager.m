@@ -10,6 +10,7 @@
 #import "MYLoginViewController.h"
 #import "MYUserManager.h"
 #import "MYHomeTabbarViewController.h"
+#import "ViewController.h"
 
 @interface MYApplicationManager ()
 
@@ -34,11 +35,11 @@
 }
 
 - (UIViewController *)rootViewController {
-    //#if DEBUG
-    //    MYTestViewController *tabbar = [[MYTestViewController alloc] init];
-    //    UINavigationController *testnavi = [[UINavigationController alloc] initWithRootViewController:tabbar];
-    //    return testnavi;
-    //#endif
+    #if DEBUG
+        ViewController *tabbar = [[ViewController alloc] init];
+        UINavigationController *testnavi = [[UINavigationController alloc] initWithRootViewController:tabbar];
+        return testnavi;
+    #endif
     if ([MYUserManager.shared isLogin] && !MYUserManager.shared.isExpireTime) {
         MYHomeTabbarViewController *tabBar = [[MYHomeTabbarViewController alloc] init];
         return tabBar;
@@ -58,10 +59,10 @@
     //用户自动登录
     @weakify(self);
     [TheUserManager checkAutoLoginWithSuccess:^{
-        [MBProgressHUD showSuccess:@"login_success".local];
+//        [MBProgressHUD showSuccess:@"login_success".local toView:self.mainWindow];
     } failure:^(NSError * _Nonnull error) {
         @strongify(self);
-        [MBProgressHUD showError:error.domain];
+//        [MBProgressHUD showError:error.description toView:self.mainWindow];
         self.mainWindow.rootViewController = self.rootViewController;
         [self.mainWindow makeKeyAndVisible];
     }];

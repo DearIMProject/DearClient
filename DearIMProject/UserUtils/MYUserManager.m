@@ -97,6 +97,8 @@ NSString *const AUTO_LOGIN_SUCCESS_NOTIFICATION = @"AUTO_LOGIN_SUCCESS_NOTIFICAT
             [self clearLoginInfo];
             if (failure) failure(error);
         }];
+    } else {
+        if (failure) failure(nil);
     }
 }
 

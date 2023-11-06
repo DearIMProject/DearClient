@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MYMessage.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,13 +23,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)didWriteDataSuccess:(MYSocketManager *)manager;
 
-- (void)didReceiveOnManager:(MYSocketManager *)manager message:(NSString *)message;
+- (void)didReceiveOnManager:(MYSocketManager *)manager message:(MYMessage *)message;
 
 @end
 
 @interface MYSocketManager : NSObject
 
 @property (nonatomic, strong) NSString *host;
+@property (nonatomic, assign) NSInteger port;
 
 @property (nonatomic, assign) BOOL isConnect;
 
@@ -41,7 +43,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)disConnect;
 
-- (void)sendText:(NSString *)text;
+//- (void)sendText:(NSString *)text;
+
+- (void)sendMessage:(MYMessage *)message;
 
 @end
 
