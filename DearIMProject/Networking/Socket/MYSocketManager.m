@@ -112,9 +112,7 @@ static MYSocketManager *__onetimeClass;
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag {
     NSLog(@"接收到data: %@",data);
     for (id<MYSocketManagerDelegate> delegate in self.delegates) {
-        if ([delegate respondsToSelector:@selector(didReceiveOnManager:message:)]) {
-            //            NSString* newStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            
+        if ([delegate respondsToSelector:@selector(didReceiveOnManager:message:)]) {            
             [delegate didReceiveOnManager:self message:[self.msgCodec decodeWithData:data]];
         }
     }

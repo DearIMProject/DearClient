@@ -43,6 +43,9 @@
                          success:^(NSDictionary * _Nonnull result) {
         TheUserManager.user = [MYUser yy_modelWithJSON:result[@"user"]];
         [NSNotificationCenter.defaultCenter postNotificationName:LOGIN_SUCCESS_NOTIFICATION object:nil];
+        if (success) {
+            success();
+        }
         } failure:failure];
 }
 

@@ -11,6 +11,7 @@
 typedef enum : int {
     MYMessageEntiteyType_USER = 0,
     MYMessageEntiteyType_GROUP,
+    MYMessageEntiteyType_SERVER,
     MYMessageEntityType_ALL
 } MYMessageEntityType;
 
@@ -20,6 +21,7 @@ typedef enum : int {
     MYMessageType_FILE,
     MYMessageType_LINK,
     MYMessageType_CHAT_MESSAGE,
+    MYMessageType_REQUEST_LOGIN,
     MYMessageType_ALL
 } MYMessageType;
 

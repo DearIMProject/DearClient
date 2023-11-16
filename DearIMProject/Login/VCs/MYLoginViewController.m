@@ -8,6 +8,7 @@
 #import "MYLoginViewController.h"
 #import <MYUtils/MYUtils.h>
 #import "MYUserManager.h"
+#import "MYChatManager.h"
 #import "MYLoginService.h"
 
 @interface MYLoginViewController ()
@@ -38,7 +39,7 @@ __MY_ROUTER_REGISTER__
                                              object:nil];
     self.navigationController.navigationBar.translucent = YES;
 #if DEBUG
-    self.nameTextField.text = @"apple@apple.com";
+    self.nameTextField.text = @"apple1@apple.com";
     self.passwordTextField.text = @"apple";
 #endif
 }
@@ -64,14 +65,15 @@ __MY_ROUTER_REGISTER__
     // 3. 调用接口 - 成功跳转到成功页面
     NSString *userName = self.nameTextField.text;
     NSString *password = self.passwordTextField.text;
+    [theChatManager initChat];
     @weakify(self);
     [self.service loginWithEmail:userName
                         password:password
                          success:^{
         @strongify(self);
-        //TODO: wmy show success
         [MBProgressHUD showSuccess:@"成功！" toView:self.view];
-        
+        //TODO: wmy 刷新
+        [TheApplication refreshRootViewController];
     } failure:^(NSError * _Nonnull error) {
 //        @strongify(self);
         //TODO: wmy show error

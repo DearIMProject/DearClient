@@ -35,11 +35,11 @@
 }
 
 - (UIViewController *)rootViewController {
-    #if DEBUG
-        ViewController *tabbar = [[ViewController alloc] init];
-        UINavigationController *testnavi = [[UINavigationController alloc] initWithRootViewController:tabbar];
-        return testnavi;
-    #endif
+//    #if DEBUG
+//        ViewController *tabbar = [[ViewController alloc] init];
+//        UINavigationController *testnavi = [[UINavigationController alloc] initWithRootViewController:tabbar];
+//        return testnavi;
+//    #endif
     if ([MYUserManager.shared isLogin] && !MYUserManager.shared.isExpireTime) {
         MYHomeTabbarViewController *tabBar = [[MYHomeTabbarViewController alloc] init];
         return tabBar;
