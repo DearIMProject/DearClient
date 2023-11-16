@@ -50,6 +50,9 @@
     message.content = messageStr;
     message.messageType = MYMessageType_TEXT;
     message.timestamp = [[NSDate alloc] init].timeIntervalSince1970;
+    
+    NSLog(@"要发送的消息为 message= %@",message);
+    
     [TheSocket sendMessage:message];
 }
 

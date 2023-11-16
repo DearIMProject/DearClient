@@ -25,7 +25,6 @@
 		180674272AF3868400175CB1 /* MYSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 180674262AF3868400175CB1 /* MYSocketManager.m */; };
 		18B8BEBD2AF8B117000FAAF2 /* MYMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B8BEBC2AF8B117000FAAF2 /* MYMessage.m */; };
 		18B8BEC12AF8D736000FAAF2 /* MYByteBuf.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B8BEC02AF8D736000FAAF2 /* MYByteBuf.m */; };
-		18B8BED02AF8E3A8000FAAF2 /* DearIMProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC9D9842ABD8CBB007BB24F /* DearIMProjectTests.m */; };
 		18C067412AF4926D00C3DE3D /* MYHomeTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C067402AF4926D00C3DE3D /* MYHomeTabbarViewController.m */; };
 		18C067442AF4929200C3DE3D /* MYChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C067432AF4929200C3DE3D /* MYChatListViewController.m */; };
 		18C067472AF492D900C3DE3D /* MYProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C067462AF492D900C3DE3D /* MYProfileViewController.m */; };
@@ -354,7 +353,6 @@
 				DEC9D9612ABD8CB9007BB24F /* Sources */,
 				DEC9D9622ABD8CB9007BB24F /* Frameworks */,
 				DEC9D9632ABD8CB9007BB24F /* Resources */,
-				19B04ACF8DDBCC73FBD1E341 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -449,24 +447,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		19B04ACF8DDBCC73FBD1E341 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DearIMProject/Pods-DearIMProject-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DearIMProject/Pods-DearIMProject-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "
-";
-			showEnvVarsInLog = 0;
-		};
 		B0AE168548A95424D31FC246 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -529,7 +509,6 @@
 				180673F32AF34F6600175CB1 /* MYViewController+MYRouter.m in Sources */,
 				DEC9D96A2ABD8CB9007BB24F /* AppDelegate.m in Sources */,
 				18C067472AF492D900C3DE3D /* MYProfileViewController.m in Sources */,
-				18B8BED02AF8E3A8000FAAF2 /* DearIMProjectTests.m in Sources */,
 				18C067412AF4926D00C3DE3D /* MYHomeTabbarViewController.m in Sources */,
 				18CCD2A62AD29667000BEBB7 /* MYLoginViewController.m in Sources */,
 				1806741C2AF37FCB00175CB1 /* MYTestChatViewController.m in Sources */,

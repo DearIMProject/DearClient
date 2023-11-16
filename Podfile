@@ -28,8 +28,8 @@ target 'DearIMProject' do
     # Pods for testing
   end
 
-  target 'DearIMProjectUITests' do
-    # Pods for testing
-  end
+#  target 'DearIMProjectUITests' do
+#    # Pods for testing
+#  end
 
 end

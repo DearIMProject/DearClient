@@ -22,19 +22,55 @@
 //    // Put teardown code here. This method is called after the invocation of each test method in the class.
 //}
 
-- (void)testExample {
+- (void)testOne {
     MYByteBuf *byte = [[MYByteBuf alloc] initWithCapacity:10];
     [byte writeInt:1];
     int value = [byte readInt];
-    NSLog(@"%d",value);
+    XCTAssertEqual(value, 1);
+}
+
+- (void)testFF {
+    MYByteBuf *byte = [[MYByteBuf alloc] initWithCapacity:10];
+    [byte writeInt:(1 + 0xFF)];
+    int value = [byte readInt];
+    XCTAssertEqual(value, 1 +0xFF);
+}
+
+- (void)testLong {
+    MYByteBuf *byte = [[MYByteBuf alloc] initWithCapacity:10];
+    [byte writeLong:(1 + 0xFF)];
+    long value = [byte readLong];
+    XCTAssertEqual(value, 1 +0xFF);
+}
+
+
+- (void)testMultiRead {
+    MYByteBuf *byte = [[MYByteBuf alloc] initWithCapacity:10];
+    [byte writeLong:(1 + 0xFF)];
+    [byte writeInt:(1 + 0xFF)];
+    
+    long value1 = [byte readLong];
+    int value2 = [byte readInt];
+    XCTAssertEqual(value1, 1 +0xFF);
+    XCTAssertEqual(value2, 1 +0xFF);
     
 }
 
-//- (void)testPerformanceExample {
-//    // This is an example of a performance test case.
-//    [self measureBlock:^{
-//        // Put the code you want to measure the time of here.
-//    }];
-//}
+- (void)testString {
+    MYByteBuf *byte = [[MYByteBuf alloc] initWithCapacity:32];
+    NSString *string = @"abcdefghijklmn";
+    [byte writeString:string];
+    
+    NSString *result = [byte readStringWithLength:[string lengthOfBytesUsingEncoding:NSUTF8StringEncoding]];
+    NSLog(@"result = %@",result);
+    
+}
+
+
+- (void)testToId {
+    MYByteBuf *byte = [[MYByteBuf alloc] initWithCapacity:32];
+    long fromId = 11223344;
+    [byte writeLong:fromId];
+}
 
 @end

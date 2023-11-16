@@ -4,51 +4,65 @@
 
 #import "MYMessageCodec.h"
 #import "MYMessage.h"
+#import "MYByteBuf.h"
 
 static int MAGIC_NUMBER = 891013;
 static int VERSION = 1;
 
+@interface MYMessageCodec ()
+
+@end
+
 @implementation MYMessageCodec
 
 - (NSData *)encodeWithMessage:(MYMessage *)message {
+    NSLog(@"decode a message -----------------------------------------------");
+    
     if (!message) {
         return nil;
     }
-    
-    NSMutableData *data = [NSMutableData data];
+    MYByteBuf *data = [[MYByteBuf alloc] initWithCapacity:10];
     // 魔数
-    int magic = ntohl(MAGIC_NUMBER);
-    [NSData dataWithBytes:&magic length:sizeof(magic)];
-    [data appendBytes:&magic length:sizeof(magic)];
+    int magic = MAGIC_NUMBER;
+    [data writeInt:magic];
     // 版本号
-    int version = ntohl(VERSION);
-    [data appendBytes:&version length:sizeof(int)];
+    int version = VERSION;
+    [data writeByte:version];
     // 序列化
-    MYMessageSerializeType type = ntohl(MYMessageSerializeType_JSON);
-    [data appendBytes:&type length:sizeof(int)];
+    MYMessageSerializeType type = MYMessageSerializeType_JSON;
+    [data writeByte:type];
+
     // 消息id
-    long msgId = ntohll(message.msgId);
-    [data appendBytes:&msgId length:sizeof(long)];
+    long msgId = message.msgId;
+    [data writeLong:msgId];
+    // 消息类型
+    MYMessageType msgType = message.messageType;
+    [data writeInt:msgType];
     // 时间戳
-    long timestamp = ntohll(message.timestamp);
-    [data appendBytes:&timestamp length:sizeof(long)];
+    long timestamp = message.timestamp;
+    [data writeLong:timestamp];
     // 发送方
-    long fromId = ntohll(message.fromId);
-    [data appendBytes:&fromId length:sizeof(int)];
-    MYMessageEntityType fromTyp = ntohl(message.fromEntity);
-    [data appendBytes:&fromTyp length:sizeof(int)];
+    long fromId = message.fromId;
+    [data writeLong:fromId];
+    MYMessageEntityType fromTyp = message.fromEntity;
+    [data writeByte:fromTyp];
     // 接收方
-    long toId = ntohll(message.toId);
-    [data appendBytes:&toId length:sizeof(int)];
-    MYMessageEntityType toTyp = ntohl(message.toEntity);
-    [data appendBytes:&toTyp length:sizeof(int)];
+    long toId = message.toId;
+    [data writeLong:toId];
+    MYMessageEntityType toTyp = message.toEntity;
+    [data writeByte:toTyp];
+    // 内容
     NSString *content = message.content;
-    int contentLength = ntohl(message.content.length);
-    NSData *bytes = [content dataUsingEncoding:NSUTF8StringEncoding];
-    [data appendBytes:&contentLength length:sizeof(int)];
-    [data appendBytes:&bytes length:content.length];
-    
-    return data.copy;
+    NSData *datas = [content dataUsingEncoding:NSUTF8StringEncoding];
+    int contentLength = (int)datas.length;
+    [data writeInt:contentLength];
+    Byte abyte[contentLength];
+    [datas getBytes:abyte range:NSMakeRange(0, datas.length)];
+    [data writeBytes:abyte length:contentLength];
+    NSLog(@"decode a message end --------------------------------------------");
+    NSData *result = [data readAll];
+    NSLog(@"data = %@",result);
+    return result;
 }
 
 
@@ -56,124 +70,96 @@ static int VERSION = 1;
     
     NSLog(@"decode a message -----------------------------------------------");
     
-    NSData *data = [NSData dataWithData:oriData];
-    int magic_number;
-    if (data.length < sizeof(int)) {
+    MYByteBuf *data = [[MYByteBuf alloc] initWithData:oriData];
+    
+    if (data.maxCapacity < sizeof(int)) {
         return nil;
     }
-    [data getBytes:&magic_number length:sizeof(int)];
+    int magic_number = [data readInt];
     if (magic_number != MAGIC_NUMBER) {
         return nil;
     }
-    
     // 版本号
-    data = [data subdataWithRange:NSMakeRange(sizeof(int), [data length] - sizeof(int))];
-    int version;
-    if (data.length < sizeof(int)) {
+    if (data.maxCapacity < sizeof(int)) {
         return nil;
     }
-    [data getBytes:&version length:sizeof(int)];
+    int version = [data readByte];;
     if (version > VERSION) {
         NSLog(@"请升级APP");
         return nil;
     }
-    if (data.length < sizeof(long)) {
-        return nil;
-    }
     
     // 序列化
-    data = [data subdataWithRange:NSMakeRange(sizeof(long), data.length - sizeof(long))];
-    MYMessageSerializeType type;
-    if (data.length < sizeof(int)) {
+    if (data.maxCapacity < sizeof(VERSION)) {
         return nil;
     }
-    [data getBytes:&type length:sizeof(int)];
+    MYMessageSerializeType type = [data readByte];
+    if (type > MYMessageSerializeType_ALL) {
+        return nil;
+    }
     if (type != MYMessageSerializeType_JSON) {
         return nil;
     }
     
-    // msgId
-    data = [data subdataWithRange:NSMakeRange(sizeof(int), data.length - sizeof(int))];
-    long msgId;
-    if (data.length < sizeof(long)) {
+    // 消息id
+    if (data.maxCapacity < sizeof(int)) {
         return nil;
     }
-    [data getBytes:&msgId length:sizeof(long)];
+    long msgId = [data readLong];
     NSLog(@"msgId = %ld", msgId);
 
     // 消息类型
-    MYMessageType msgType;
-    if (data.length < sizeof(int)) {
+    if (data.maxCapacity < sizeof(int)) {
         return nil;
     }
-    [data getBytes:&msgType length:sizeof(int)];
+    MYMessageType msgType = [data readInt];
     NSLog(@"msgType = %d",msgType);
     
     // 时间戳
-    data = [data subdataWithRange:NSMakeRange(sizeof(int), data.length - sizeof(int))];
-    long timestamp;
-    if (data.length < sizeof(long)) {
+    if (data.maxCapacity < sizeof(long)) {
         return nil;
     }
-    [data getBytes:&timestamp length:sizeof(long)];
+    long timestamp = [data readLong];
     NSLog(@"timestamp = %ld",timestamp);
     
     // 发送方
-    data = [data subdataWithRange:NSMakeRange(sizeof(long), data.length - sizeof(long))];
-    long fromId;
-    if (data.length < sizeof(long)) {
+    if (data.maxCapacity < sizeof(long)) {
         return nil;
     }
-    [data getBytes:&fromId length:sizeof(long)];
+    long fromId = [data readLong];
     NSLog(@"fromId = %ld",fromId);
-
-    data = [data subdataWithRange:NSMakeRange(sizeof(long), data.length - sizeof(long))];
-    MYMessageEntityType fromType;
-    if (data.length < sizeof(int)) {
+    
+    if (data.maxCapacity < sizeof(long)) {
         return nil;
     }
-    [data getBytes:&fromType length:sizeof(int)];
+    MYMessageEntityType fromType = [data readByte];
     NSLog(@"fromEntity = %d",fromType);
     
     // 接收方
-    data = [data subdataWithRange:NSMakeRange(sizeof(long), data.length - sizeof(long))];
-    long toId;
-    if (data.length < sizeof(long)) {
+    if (data.maxCapacity < sizeof(long)) {
         return nil;
     }
-    [data getBytes:&toId length:sizeof(long)];
+    long toId = [data readLong];
     NSLog(@"toId = %ld",toId);
-
-    data = [data subdataWithRange:NSMakeRange(sizeof(long), data.length - sizeof(long))];
-    MYMessageEntityType toType;
-    if (data.length < sizeof(int)) {
+    if (data.maxCapacity < sizeof(long)) {
         return nil;
     }
-    [data getBytes:&toType length:sizeof(int)];
+    MYMessageEntityType toType = [data readByte];
     NSLog(@"toType = %d",toType);
     
     // 消息内容长度
-    data = [data subdataWithRange:NSMakeRange(sizeof(int), data.length - sizeof(int))];
-    int length;
-    if (data.length < sizeof(int)) {
+    if (data.maxCapacity < sizeof(int)) {
         return nil;
     }
-    [data getBytes:&length length:sizeof(int)];
+    int length = [data readInt];
     NSLog(@"contentLength = %d",length);
-    
+    if (data.maxCapacity < length) {
+        return nil;
+    }
     // 消息内容
-    data = [data subdataWithRange:NSMakeRange(sizeof(int), data.length - sizeof(int))];
-    if (data.length < sizeof(int)) {
-        return nil;
-    }
-    NSString *content;
-    [data getBytes:&content length:length];
+    NSString *content = [data readStringWithLength:length];
     NSLog(@"content:%@",content);
-    data = [data subdataWithRange:NSMakeRange(length, data.length - length)];
-    if (data.length != 0) {
-        return nil;
-    }
-    
+
     MYMessage *message = [[MYMessage alloc] init];
     message.msgId = msgId;
     message.messageType = msgType;

@@ -27,7 +27,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0sW-qK-gx3">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="abcdefghijklmnopqrstuvwxyz1234567890一端文字[]{}「」【】" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0sW-qK-gx3">
                     <rect key="frame" x="32" y="165" width="329" height="150"/>
                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                     <constraints>

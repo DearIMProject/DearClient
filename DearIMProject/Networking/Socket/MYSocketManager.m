@@ -73,7 +73,14 @@ static MYSocketManager *__onetimeClass;
 }
 
 - (void)sendMessage:(MYMessage *)message {
-    [_asyncSocket writeData:[self.msgCodec encodeWithMessage:message] withTimeout:-1 tag:0];
+    //TODO: wmy test
+//    {
+//        NSData *data = [message.content dataUsingEncoding:NSUTF8StringEncoding];
+//        [_asyncSocket writeData:data withTimeout:-1 tag:0];
+//    }
+    NSData *data = [self.msgCodec encodeWithMessage:message];
+    NSLog(@"data = %@",data);
+    [_asyncSocket writeData:data withTimeout:-1 tag:0];
 }
 
 
@@ -103,9 +110,10 @@ static MYSocketManager *__onetimeClass;
 }
 
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag {
+    NSLog(@"接收到data: %@",data);
     for (id<MYSocketManagerDelegate> delegate in self.delegates) {
         if ([delegate respondsToSelector:@selector(didReceiveOnManager:message:)]) {
-//            NSString* newStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            //            NSString* newStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
             
             [delegate didReceiveOnManager:self message:[self.msgCodec decodeWithData:data]];
         }
