@@ -32,6 +32,12 @@ typedef void(^FailureBlock)(NSError *error);
 - (void)autoLoginWithSuccess:(SuccessBlock)success
                      failure:(FailureBlock)failure;
 
+/// 登出
+/// - Parameters:
+///   - success: 成功回调
+///   - failure: 失败回调
+- (void)logoutWithSuccess:(SuccessBlock)success
+                  failure:(FailureBlock)failure;
 @end
 
 NS_ASSUME_NONNULL_END

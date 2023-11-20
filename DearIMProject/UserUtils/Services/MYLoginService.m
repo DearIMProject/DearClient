@@ -56,7 +56,31 @@
     [self.request requestApiName:@"/user/autologin" version:@""
                            param:param
                          success:^(NSDictionary * _Nonnull result) {
-        NSLog(@"");
+        TheUserManager.user = [MYUser yy_modelWithJSON:result[@"user"]];
+        if (success) {
+            success();
+        }
         } failure:failure];
 }
+
+- (void)logoutWithSuccess:(SuccessBlock)success
+                  failure:(FailureBlock)failure {
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"token"] = TheUserManager.user.token;
+    [self.request requestApiName:@"/user/logout" version:@""
+                           param:param
+                         success:^(NSDictionary * _Nonnull result) {
+        TheUserManager.user = nil;
+        [NSNotificationCenter.defaultCenter postNotificationName:LOGOUT_NOTIFICATION object:nil];
+        if (success) {
+            success();
+        }
+    } failure:^(NSError * _Nonnull error) {
+        if (failure) {
+            failure(error);
+        }
+        [NSNotificationCenter.defaultCenter postNotificationName:LOGOUT_NOTIFICATION object:nil];
+    }];
+}
+
 @end

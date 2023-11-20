@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 FOUNDATION_EXPORT NSString *const LOGIN_SUCCESS_NOTIFICATION;
 FOUNDATION_EXPORT NSString *const AUTO_LOGIN_SUCCESS_NOTIFICATION;
+FOUNDATION_EXPORT NSString *const LOGOUT_NOTIFICATION;
 
 #define TheUserManager MYUserManager.shared
 
@@ -34,6 +35,8 @@ FOUNDATION_EXPORT NSString *const AUTO_LOGIN_SUCCESS_NOTIFICATION;
 ///   - success: 登录成功
 ///   - failure: 登录失败
 - (void)checkAutoLoginWithSuccess:(void(^)(void))success failure:(void(^)(NSError *error))failure;
+
+
 
 @end
 

@@ -17,6 +17,7 @@ PODS:
   - CocoaAsyncSocket (7.6.5)
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
+  - MYClientDatabase (0.1.0)
   - MYIconfont (0.1.0)
   - MYImageCache (0.1.0):
     - SDWebImage
@@ -34,14 +35,15 @@ PODS:
     - MBProgressHUD
     - ReactiveObjC
   - ReactiveObjC (3.1.1)
-  - SDWebImage (5.15.4):
-    - SDWebImage/Core (= 5.15.4)
-  - SDWebImage/Core (5.15.4)
+  - SDWebImage (5.18.3):
+    - SDWebImage/Core (= 5.18.3)
+  - SDWebImage/Core (5.18.3)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking
   - CocoaAsyncSocket
+  - MYClientDatabase (from `../MYClientDatabase`)
   - MYIconfont (from `https://github.com/MYBasicUtils/MYIconfont.git`)
   - MYImageCache (from `/Users/apple/Developer/iOS/MYImageCache`)
   - MYMVVM (from `/Users/apple/Developer/iOS/MYMVVM`)
@@ -60,6 +62,8 @@ SPEC REPOS:
     - YYModel
 
 EXTERNAL SOURCES:
+  MYClientDatabase:
+    :path: "../MYClientDatabase"
   MYIconfont:
     :git: https://github.com/MYBasicUtils/MYIconfont.git
   MYImageCache:
@@ -83,6 +87,7 @@ SPEC CHECKSUMS:
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MYClientDatabase: d6525171d12fcff70c5b46fe6b454da4c0d9c37b
   MYIconfont: a328b874d9605267828243ec224fe56949dc90d4
   MYImageCache: 3910c515f53da3f8fc5322ba3226506230176f8e
   MYMVVM: 9d4d6c6ec04a8af8c9867ede6146c21674c395d0
@@ -90,9 +95,9 @@ SPEC CHECKSUMS:
   MYSkin: b40195bbfcbf0502a279f052005532e6289d5974
   MYUtils: 1442f43627aec8fabf7b2f9ebb8c6be4ca687917
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
-  SDWebImage: 1c39de67663e5eebb2f41324d5d580eeea12dd4c
+  SDWebImage: 96e0c18ef14010b7485210e92fac888587ebb958
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: aeb6d071141a73fa37e2b5e69f4f790686347a6d
+PODFILE CHECKSUM: 02880bcf3c04dc450f07909e53f8d3e22f3ecca5
 
 COCOAPODS: 1.11.3

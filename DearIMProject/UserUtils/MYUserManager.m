@@ -11,6 +11,9 @@
 
 NSString *const LOGIN_SUCCESS_NOTIFICATION = @"LOGIN_SUCCESS_NOTIFICATION";
 NSString *const AUTO_LOGIN_SUCCESS_NOTIFICATION = @"AUTO_LOGIN_SUCCESS_NOTIFICATION";
+NSString *const LOGOUT_NOTIFICATION = @"LOGOUT_NOTIFICATION";
+
+NSString *kUserDataName = @"userData";
 
 @interface MYUserManager ()
 
@@ -36,7 +39,7 @@ NSString *const AUTO_LOGIN_SUCCESS_NOTIFICATION = @"AUTO_LOGIN_SUCCESS_NOTIFICAT
         _loginService = [[MYLoginService alloc] init];
         
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        NSData *userData = [defaults valueForKey:@"userData"];
+        NSData *userData = [defaults valueForKey:kUserDataName];
         if (userData) {
             NSError *error;
             // 2.读取归档，并将其显示在对应文本框。
@@ -80,14 +83,14 @@ NSString *const AUTO_LOGIN_SUCCESS_NOTIFICATION = @"AUTO_LOGIN_SUCCESS_NOTIFICAT
     _user = user;
     if (user == nil) {
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        [defaults setValue:nil forKey:@"userData"];
+        [defaults setValue:nil forKey:kUserDataName];
         [defaults synchronize];
         return;
     }
     NSError *error;
     NSData *userData = [NSKeyedArchiver archivedDataWithRootObject:user requiringSecureCoding:NO error:&error];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setValue:userData forKey:@"userData"];
+    [defaults setValue:userData forKey:kUserDataName];
     [defaults synchronize];
 }
 

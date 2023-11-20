@@ -9,6 +9,12 @@
 
 @implementation MYViewController (MYRouter)
 
+- (instancetype)initWithParam:(NSDictionary *)param {
+    if (self = [super init]) {
+        
+    }
+    return self;
+}
 
 + (NSString *)urlName {
 //    NSAssert(false, @"subclass must override");

@@ -1,5 +1,4 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '15.0'
 
 target 'DearIMProject' do
 #  pod 'MYRouter', :git => 'https://github.com/MYBasicUtils/MYRouter.git'
@@ -18,6 +17,8 @@ target 'DearIMProject' do
   pod 'MYSkin', :path => '/Users/apple/Developer/iOS/MYSkin'
   
   pod 'MYIconfont', :git => 'https://github.com/MYBasicUtils/MYIconfont.git'
+  
+  pod 'MYClientDatabase', :path => '../MYClientDatabase'
   
   pod 'AFNetworking'
   pod 'CocoaAsyncSocket'

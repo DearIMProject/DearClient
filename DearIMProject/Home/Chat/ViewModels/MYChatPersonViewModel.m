@@ -9,4 +9,12 @@
 
 @implementation MYChatPersonViewModel
 
+- (Class)itemViewClass {
+    return NSClassFromString(@"MYChatPersonItemView");
+}
+
+- (CGSize)itemSize {
+    return CGSizeMake(0, 64);
+}
+
 @end

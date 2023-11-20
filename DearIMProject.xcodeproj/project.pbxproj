@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0DDF37CBB73F35FD909B2A4C /* libPods-DearIMProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F27E43E8F2014C72234FECA /* libPods-DearIMProjectTests.a */; };
 		180673E62AF34B2600175CB1 /* MYUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 180673E52AF34B2600175CB1 /* MYUserManager.m */; };
 		180673EF2AF34D6300175CB1 /* MYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 180673EE2AF34D6300175CB1 /* MYUser.m */; };
 		180673F32AF34F6600175CB1 /* MYViewController+MYRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 180673F22AF34F6600175CB1 /* MYViewController+MYRouter.m */; };
@@ -29,16 +28,24 @@
 		1882D54F2B05ECFB00BC8AC3 /* MYChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1882D54E2B05ECFB00BC8AC3 /* MYChatMessage.m */; };
 		1882D5552B06134300BC8AC3 /* MYChatPersonViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1882D5542B06134300BC8AC3 /* MYChatPersonViewModel.m */; };
 		1882D5592B06136500BC8AC3 /* MYChatPersonDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1882D5582B06136500BC8AC3 /* MYChatPersonDataSource.m */; };
-		1882D55C2B06162800BC8AC3 /* MYChatPersonSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1882D55B2B06162800BC8AC3 /* MYChatPersonSectionModel.m */; };
+		1882D5642B06F3F300BC8AC3 /* MYProfileService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1882D5632B06F3F300BC8AC3 /* MYProfileService.m */; };
+		1882D5672B06F50000BC8AC3 /* MYProfileDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1882D5662B06F50000BC8AC3 /* MYProfileDataSource.m */; };
+		1882D56B2B06F5B100BC8AC3 /* MYProfileItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1882D56A2B06F5B100BC8AC3 /* MYProfileItemView.m */; };
+		1882D56E2B06F70000BC8AC3 /* MYProfileItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1882D56D2B06F70000BC8AC3 /* MYProfileItemViewModel.m */; };
+		1882D5752B07075500BC8AC3 /* MYChatPersonItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1882D5742B07075500BC8AC3 /* MYChatPersonItemView.m */; };
+		1882D5782B07109800BC8AC3 /* MYChatMessageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1882D5772B07109800BC8AC3 /* MYChatMessageListViewController.m */; };
+		1882D57B2B0711AD00BC8AC3 /* MYChatMessageDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1882D57A2B0711AD00BC8AC3 /* MYChatMessageDataSource.m */; };
+		1882D57E2B0711EB00BC8AC3 /* MYChatMessageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1882D57D2B0711EB00BC8AC3 /* MYChatMessageViewModel.m */; };
+		1882D5812B07121400BC8AC3 /* MYChatMessageItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1882D5802B07121400BC8AC3 /* MYChatMessageItemView.m */; };
 		18B8BEBD2AF8B117000FAAF2 /* MYMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B8BEBC2AF8B117000FAAF2 /* MYMessage.m */; };
 		18B8BEC12AF8D736000FAAF2 /* MYByteBuf.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B8BEC02AF8D736000FAAF2 /* MYByteBuf.m */; };
 		18C067412AF4926D00C3DE3D /* MYHomeTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C067402AF4926D00C3DE3D /* MYHomeTabbarViewController.m */; };
-		18C067442AF4929200C3DE3D /* MYChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C067432AF4929200C3DE3D /* MYChatListViewController.m */; };
+		18C067442AF4929200C3DE3D /* MYChatPersonListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C067432AF4929200C3DE3D /* MYChatPersonListViewController.m */; };
 		18C067472AF492D900C3DE3D /* MYProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C067462AF492D900C3DE3D /* MYProfileViewController.m */; };
 		18C0674E2AF493B900C3DE3D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18C067502AF493B900C3DE3D /* InfoPlist.strings */; };
 		18CCD2A62AD29667000BEBB7 /* MYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CCD2A42AD29667000BEBB7 /* MYLoginViewController.m */; };
 		18CCD2A72AD29667000BEBB7 /* MYLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CCD2A52AD29667000BEBB7 /* MYLoginViewController.xib */; };
-		3812664A3D03127F01D53970 /* libPods-DearIMProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F21E6BDDF4D72EDA92137266 /* libPods-DearIMProject.a */; };
+		2ACF92EBCFBEB20BEDAE1FD2 /* libPods-DearIMProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BDD7D70B0CA461C27531EA7 /* libPods-DearIMProjectTests.a */; };
 		58B8352A62149F74A2EA43A4 /* MYMessageCodec.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B831349AF29A578A13CD87 /* MYMessageCodec.m */; };
 		DEC9D96A2ABD8CB9007BB24F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC9D9692ABD8CB9007BB24F /* AppDelegate.m */; };
 		DEC9D96D2ABD8CB9007BB24F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC9D96C2ABD8CB9007BB24F /* SceneDelegate.m */; };
@@ -48,6 +55,7 @@
 		DEC9D9782ABD8CBA007BB24F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC9D9762ABD8CBA007BB24F /* LaunchScreen.storyboard */; };
 		DEC9D97B2ABD8CBA007BB24F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC9D97A2ABD8CBA007BB24F /* main.m */; };
 		DEC9D9852ABD8CBB007BB24F /* DearIMProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC9D9842ABD8CBB007BB24F /* DearIMProjectTests.m */; };
+		FCB3577965C471FC1D865C81 /* libPods-DearIMProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1048B87D285A5086BD8328FE /* libPods-DearIMProject.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F27E43E8F2014C72234FECA /* libPods-DearIMProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DearIMProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1048B87D285A5086BD8328FE /* libPods-DearIMProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DearIMProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		180673E42AF34B2600175CB1 /* MYUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYUserManager.h; sourceTree = "<group>"; };
 		180673E52AF34B2600175CB1 /* MYUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYUserManager.m; sourceTree = "<group>"; };
 		180673ED2AF34D6300175CB1 /* MYUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYUser.h; sourceTree = "<group>"; };
@@ -101,8 +109,24 @@
 		1882D5542B06134300BC8AC3 /* MYChatPersonViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYChatPersonViewModel.m; sourceTree = "<group>"; };
 		1882D5572B06136500BC8AC3 /* MYChatPersonDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYChatPersonDataSource.h; sourceTree = "<group>"; };
 		1882D5582B06136500BC8AC3 /* MYChatPersonDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYChatPersonDataSource.m; sourceTree = "<group>"; };
-		1882D55A2B06162800BC8AC3 /* MYChatPersonSectionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYChatPersonSectionModel.h; sourceTree = "<group>"; };
-		1882D55B2B06162800BC8AC3 /* MYChatPersonSectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYChatPersonSectionModel.m; sourceTree = "<group>"; };
+		1882D5622B06F3F300BC8AC3 /* MYProfileService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYProfileService.h; sourceTree = "<group>"; };
+		1882D5632B06F3F300BC8AC3 /* MYProfileService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYProfileService.m; sourceTree = "<group>"; };
+		1882D5652B06F50000BC8AC3 /* MYProfileDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYProfileDataSource.h; sourceTree = "<group>"; };
+		1882D5662B06F50000BC8AC3 /* MYProfileDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYProfileDataSource.m; sourceTree = "<group>"; };
+		1882D5692B06F5B100BC8AC3 /* MYProfileItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYProfileItemView.h; sourceTree = "<group>"; };
+		1882D56A2B06F5B100BC8AC3 /* MYProfileItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYProfileItemView.m; sourceTree = "<group>"; };
+		1882D56C2B06F70000BC8AC3 /* MYProfileItemViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYProfileItemViewModel.h; sourceTree = "<group>"; };
+		1882D56D2B06F70000BC8AC3 /* MYProfileItemViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYProfileItemViewModel.m; sourceTree = "<group>"; };
+		1882D5732B07075500BC8AC3 /* MYChatPersonItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYChatPersonItemView.h; sourceTree = "<group>"; };
+		1882D5742B07075500BC8AC3 /* MYChatPersonItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYChatPersonItemView.m; sourceTree = "<group>"; };
+		1882D5762B07109800BC8AC3 /* MYChatMessageListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYChatMessageListViewController.h; sourceTree = "<group>"; };
+		1882D5772B07109800BC8AC3 /* MYChatMessageListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYChatMessageListViewController.m; sourceTree = "<group>"; };
+		1882D5792B0711AD00BC8AC3 /* MYChatMessageDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYChatMessageDataSource.h; sourceTree = "<group>"; };
+		1882D57A2B0711AD00BC8AC3 /* MYChatMessageDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYChatMessageDataSource.m; sourceTree = "<group>"; };
+		1882D57C2B0711EB00BC8AC3 /* MYChatMessageViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYChatMessageViewModel.h; sourceTree = "<group>"; };
+		1882D57D2B0711EB00BC8AC3 /* MYChatMessageViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYChatMessageViewModel.m; sourceTree = "<group>"; };
+		1882D57F2B07121400BC8AC3 /* MYChatMessageItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYChatMessageItemView.h; sourceTree = "<group>"; };
+		1882D5802B07121400BC8AC3 /* MYChatMessageItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYChatMessageItemView.m; sourceTree = "<group>"; };
 		18B8BEBB2AF8B117000FAAF2 /* MYMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYMessage.h; sourceTree = "<group>"; };
 		18B8BEBC2AF8B117000FAAF2 /* MYMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYMessage.m; sourceTree = "<group>"; };
 		18B8BEBE2AF8B14D000FAAF2 /* MYMessageEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYMessageEnum.h; sourceTree = "<group>"; };
@@ -110,8 +134,8 @@
 		18B8BEC02AF8D736000FAAF2 /* MYByteBuf.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYByteBuf.m; sourceTree = "<group>"; };
 		18C0673F2AF4926D00C3DE3D /* MYHomeTabbarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYHomeTabbarViewController.h; sourceTree = "<group>"; };
 		18C067402AF4926D00C3DE3D /* MYHomeTabbarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYHomeTabbarViewController.m; sourceTree = "<group>"; };
-		18C067422AF4929200C3DE3D /* MYChatListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYChatListViewController.h; sourceTree = "<group>"; };
-		18C067432AF4929200C3DE3D /* MYChatListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYChatListViewController.m; sourceTree = "<group>"; };
+		18C067422AF4929200C3DE3D /* MYChatPersonListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYChatPersonListViewController.h; sourceTree = "<group>"; };
+		18C067432AF4929200C3DE3D /* MYChatPersonListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYChatPersonListViewController.m; sourceTree = "<group>"; };
 		18C067452AF492D900C3DE3D /* MYProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYProfileViewController.h; sourceTree = "<group>"; };
 		18C067462AF492D900C3DE3D /* MYProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYProfileViewController.m; sourceTree = "<group>"; };
 		18C067482AF4937700C3DE3D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -129,6 +153,7 @@
 		51EF8D631AA05A431D97D6DE /* Pods-DearIMProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DearIMProject.debug.xcconfig"; path = "Target Support Files/Pods-DearIMProject/Pods-DearIMProject.debug.xcconfig"; sourceTree = "<group>"; };
 		58B831349AF29A578A13CD87 /* MYMessageCodec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYMessageCodec.m; sourceTree = "<group>"; };
 		58B833ED369FBF635256072D /* MYMessageCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYMessageCodec.h; sourceTree = "<group>"; };
+		7BDD7D70B0CA461C27531EA7 /* libPods-DearIMProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DearIMProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D1B4292F75EEFC7822EFBD /* Pods-DearIMProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DearIMProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-DearIMProjectTests/Pods-DearIMProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC84BB76969ACFCAAA414FE2 /* Pods-DearIMProject-DearIMProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DearIMProject-DearIMProjectUITests.debug.xcconfig"; path = "Target Support Files/Pods-DearIMProject-DearIMProjectUITests/Pods-DearIMProject-DearIMProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D6D4BC308E5C1B130A77CF22 /* libPods-DearIMProject-DearIMProjectUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DearIMProject-DearIMProjectUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,7 +171,6 @@
 		DEC9D97A2ABD8CBA007BB24F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DEC9D9802ABD8CBB007BB24F /* DearIMProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DearIMProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC9D9842ABD8CBB007BB24F /* DearIMProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DearIMProjectTests.m; sourceTree = "<group>"; };
-		F21E6BDDF4D72EDA92137266 /* libPods-DearIMProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DearIMProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50A882FF06AE2BC258D799F /* Pods-DearIMProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DearIMProjectTests.release.xcconfig"; path = "Target Support Files/Pods-DearIMProjectTests/Pods-DearIMProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,7 +179,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3812664A3D03127F01D53970 /* libPods-DearIMProject.a in Frameworks */,
+				FCB3577965C471FC1D865C81 /* libPods-DearIMProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DDF37CBB73F35FD909B2A4C /* libPods-DearIMProjectTests.a in Frameworks */,
+				2ACF92EBCFBEB20BEDAE1FD2 /* libPods-DearIMProjectTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,13 +264,12 @@
 		180674112AF37E4000175CB1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1882D55D2B06F39C00BC8AC3 /* Profile */,
 				1882D5502B06131100BC8AC3 /* Chat */,
 				180674122AF37F2E00175CB1 /* MYHomeViewController.h */,
 				180674132AF37F2E00175CB1 /* MYHomeViewController.m */,
 				18C0673F2AF4926D00C3DE3D /* MYHomeTabbarViewController.h */,
 				18C067402AF4926D00C3DE3D /* MYHomeTabbarViewController.m */,
-				18C067452AF492D900C3DE3D /* MYProfileViewController.h */,
-				18C067462AF492D900C3DE3D /* MYProfileViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -303,6 +326,7 @@
 		1882D5502B06131100BC8AC3 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				1882D56F2B0705AE00BC8AC3 /* ItemViews */,
 				1882D5562B06134E00BC8AC3 /* DataSources */,
 				1882D5522B06132900BC8AC3 /* ViewModels */,
 				1882D5512B06131C00BC8AC3 /* Vcs */,
@@ -313,8 +337,10 @@
 		1882D5512B06131C00BC8AC3 /* Vcs */ = {
 			isa = PBXGroup;
 			children = (
-				18C067422AF4929200C3DE3D /* MYChatListViewController.h */,
-				18C067432AF4929200C3DE3D /* MYChatListViewController.m */,
+				18C067422AF4929200C3DE3D /* MYChatPersonListViewController.h */,
+				18C067432AF4929200C3DE3D /* MYChatPersonListViewController.m */,
+				1882D5762B07109800BC8AC3 /* MYChatMessageListViewController.h */,
+				1882D5772B07109800BC8AC3 /* MYChatMessageListViewController.m */,
 			);
 			path = Vcs;
 			sourceTree = "<group>";
@@ -324,8 +350,8 @@
 			children = (
 				1882D5532B06134300BC8AC3 /* MYChatPersonViewModel.h */,
 				1882D5542B06134300BC8AC3 /* MYChatPersonViewModel.m */,
-				1882D55A2B06162800BC8AC3 /* MYChatPersonSectionModel.h */,
-				1882D55B2B06162800BC8AC3 /* MYChatPersonSectionModel.m */,
+				1882D57C2B0711EB00BC8AC3 /* MYChatMessageViewModel.h */,
+				1882D57D2B0711EB00BC8AC3 /* MYChatMessageViewModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -335,8 +361,78 @@
 			children = (
 				1882D5572B06136500BC8AC3 /* MYChatPersonDataSource.h */,
 				1882D5582B06136500BC8AC3 /* MYChatPersonDataSource.m */,
+				1882D5792B0711AD00BC8AC3 /* MYChatMessageDataSource.h */,
+				1882D57A2B0711AD00BC8AC3 /* MYChatMessageDataSource.m */,
 			);
 			path = DataSources;
+			sourceTree = "<group>";
+		};
+		1882D55D2B06F39C00BC8AC3 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1882D5682B06F58B00BC8AC3 /* ItemViews */,
+				1882D5612B06F3D900BC8AC3 /* Services */,
+				1882D5602B06F3C900BC8AC3 /* DataSources */,
+				1882D55F2B06F3C300BC8AC3 /* ViewModels */,
+				1882D55E2B06F3BB00BC8AC3 /* Vcs */,
+				18C067452AF492D900C3DE3D /* MYProfileViewController.h */,
+				18C067462AF492D900C3DE3D /* MYProfileViewController.m */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		1882D55E2B06F3BB00BC8AC3 /* Vcs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vcs;
+			sourceTree = "<group>";
+		};
+		1882D55F2B06F3C300BC8AC3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1882D56C2B06F70000BC8AC3 /* MYProfileItemViewModel.h */,
+				1882D56D2B06F70000BC8AC3 /* MYProfileItemViewModel.m */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1882D5602B06F3C900BC8AC3 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				1882D5652B06F50000BC8AC3 /* MYProfileDataSource.h */,
+				1882D5662B06F50000BC8AC3 /* MYProfileDataSource.m */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		1882D5612B06F3D900BC8AC3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1882D5622B06F3F300BC8AC3 /* MYProfileService.h */,
+				1882D5632B06F3F300BC8AC3 /* MYProfileService.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1882D5682B06F58B00BC8AC3 /* ItemViews */ = {
+			isa = PBXGroup;
+			children = (
+				1882D5692B06F5B100BC8AC3 /* MYProfileItemView.h */,
+				1882D56A2B06F5B100BC8AC3 /* MYProfileItemView.m */,
+			);
+			path = ItemViews;
+			sourceTree = "<group>";
+		};
+		1882D56F2B0705AE00BC8AC3 /* ItemViews */ = {
+			isa = PBXGroup;
+			children = (
+				1882D5732B07075500BC8AC3 /* MYChatPersonItemView.h */,
+				1882D5742B07075500BC8AC3 /* MYChatPersonItemView.m */,
+				1882D57F2B07121400BC8AC3 /* MYChatMessageItemView.h */,
+				1882D5802B07121400BC8AC3 /* MYChatMessageItemView.m */,
+			);
+			path = ItemViews;
 			sourceTree = "<group>";
 		};
 		18CCD2A22AD29633000BEBB7 /* Login */ = {
@@ -418,9 +514,9 @@
 		E5E962F888696D2A3F7C9A15 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F21E6BDDF4D72EDA92137266 /* libPods-DearIMProject.a */,
 				D6D4BC308E5C1B130A77CF22 /* libPods-DearIMProject-DearIMProjectUITests.a */,
-				0F27E43E8F2014C72234FECA /* libPods-DearIMProjectTests.a */,
+				1048B87D285A5086BD8328FE /* libPods-DearIMProject.a */,
+				7BDD7D70B0CA461C27531EA7 /* libPods-DearIMProjectTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -436,6 +532,7 @@
 				DEC9D9612ABD8CB9007BB24F /* Sources */,
 				DEC9D9622ABD8CB9007BB24F /* Frameworks */,
 				DEC9D9632ABD8CB9007BB24F /* Resources */,
+				269F8244AB9E3ACC75777A21 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -530,6 +627,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		269F8244AB9E3ACC75777A21 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DearIMProject/Pods-DearIMProject-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DearIMProject/Pods-DearIMProject-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "xattr -d com.apple.quarantine \"${PODS_ROOT}/Target Support Files/Pods-DearIMProject/Pods-DearIMProject-resources.sh\"\n\"${PODS_ROOT}/Target Support Files/Pods-DearIMProject/Pods-DearIMProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B0AE168548A95424D31FC246 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -581,7 +695,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1882D55C2B06162800BC8AC3 /* MYChatPersonSectionModel.m in Sources */,
 				1882D5492B05EBAD00BC8AC3 /* MYLoginRequestMessage.m in Sources */,
 				180673EF2AF34D6300175CB1 /* MYUser.m in Sources */,
 				180674102AF3785E00175CB1 /* MYLoginService.m in Sources */,
@@ -589,25 +702,34 @@
 				1882D54C2B05EC7000BC8AC3 /* MYMessageFactory.m in Sources */,
 				180673E62AF34B2600175CB1 /* MYUserManager.m in Sources */,
 				180674142AF37F2E00175CB1 /* MYHomeViewController.m in Sources */,
+				1882D57E2B0711EB00BC8AC3 /* MYChatMessageViewModel.m in Sources */,
 				1882D5552B06134300BC8AC3 /* MYChatPersonViewModel.m in Sources */,
-				18C067442AF4929200C3DE3D /* MYChatListViewController.m in Sources */,
+				18C067442AF4929200C3DE3D /* MYChatPersonListViewController.m in Sources */,
+				1882D56B2B06F5B100BC8AC3 /* MYProfileItemView.m in Sources */,
 				1882D54F2B05ECFB00BC8AC3 /* MYChatMessage.m in Sources */,
 				DEC9D9702ABD8CB9007BB24F /* ViewController.m in Sources */,
 				1806740A2AF3751D00175CB1 /* MYNetworkManager.m in Sources */,
 				180673F32AF34F6600175CB1 /* MYViewController+MYRouter.m in Sources */,
+				1882D57B2B0711AD00BC8AC3 /* MYChatMessageDataSource.m in Sources */,
 				DEC9D96A2ABD8CB9007BB24F /* AppDelegate.m in Sources */,
+				1882D5812B07121400BC8AC3 /* MYChatMessageItemView.m in Sources */,
 				18C067472AF492D900C3DE3D /* MYProfileViewController.m in Sources */,
+				1882D5752B07075500BC8AC3 /* MYChatPersonItemView.m in Sources */,
 				18C067412AF4926D00C3DE3D /* MYHomeTabbarViewController.m in Sources */,
 				18CCD2A62AD29667000BEBB7 /* MYLoginViewController.m in Sources */,
+				1882D5672B06F50000BC8AC3 /* MYProfileDataSource.m in Sources */,
 				1806741C2AF37FCB00175CB1 /* MYTestChatViewController.m in Sources */,
 				DEC9D97B2ABD8CBA007BB24F /* main.m in Sources */,
 				180674272AF3868400175CB1 /* MYSocketManager.m in Sources */,
+				1882D56E2B06F70000BC8AC3 /* MYProfileItemViewModel.m in Sources */,
 				180674032AF370D600175CB1 /* MYRegisterViewController.m in Sources */,
 				1882D5592B06136500BC8AC3 /* MYChatPersonDataSource.m in Sources */,
 				DEC9D96D2ABD8CB9007BB24F /* SceneDelegate.m in Sources */,
 				18B8BEBD2AF8B117000FAAF2 /* MYMessage.m in Sources */,
 				1882D5462B05EA1900BC8AC3 /* MYChatManager.m in Sources */,
 				1806740B2AF3751D00175CB1 /* MYRequest.m in Sources */,
+				1882D5642B06F3F300BC8AC3 /* MYProfileService.m in Sources */,
+				1882D5782B07109800BC8AC3 /* MYChatMessageListViewController.m in Sources */,
 				180673FE2AF3709C00175CB1 /* MYForgetPwdViewController.m in Sources */,
 				58B8352A62149F74A2EA43A4 /* MYMessageCodec.m in Sources */,
 				18B8BEC12AF8D736000FAAF2 /* MYByteBuf.m in Sources */,

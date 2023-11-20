@@ -1,5 +1,5 @@
 //
-//  MYChatListViewController.h
+//  MYChatPersonListViewController.h
 //  DearIMProject
 //
 //  Created by APPLE on 2023/11/3.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MYChatListViewController : MYTableViewController
+@interface MYChatPersonListViewController : MYTableViewController
 
 @end
 

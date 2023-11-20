@@ -60,8 +60,12 @@ static int VERSION = 1;
     [datas getBytes:abyte range:NSMakeRange(0, datas.length)];
     [data writeBytes:abyte length:contentLength];
     NSLog(@"decode a message end --------------------------------------------");
-    NSData *result = [data readAll];
+    NSMutableData *result = [NSMutableData data];
+    MYByteBuf *lengthBuf = [[MYByteBuf alloc] initWithCapacity:4];
+//    [lengthBuf writeInt:[data length]];
+    [result appendData:[data readAll]];
     NSLog(@"data = %@",result);
+    
     return result;
 }
 
@@ -75,6 +79,10 @@ static int VERSION = 1;
     if (data.maxCapacity < sizeof(int)) {
         return nil;
     }
+    
+    int dataLength = [data readInt];
+    NSLog(@"dataLength");
+    
     int magic_number = [data readInt];
     if (magic_number != MAGIC_NUMBER) {
         return nil;

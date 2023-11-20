@@ -42,7 +42,9 @@
 //    #endif
     if ([MYUserManager.shared isLogin] && !MYUserManager.shared.isExpireTime) {
         MYHomeTabbarViewController *tabBar = [[MYHomeTabbarViewController alloc] init];
-        return tabBar;
+        MYNavigationViewController *navi = [[MYNavigationViewController alloc] initWithRootViewController:tabBar];
+        self.naviController = navi;
+        return navi;
     }
     MYNavigationViewController *navi =
     [[MYNavigationViewController alloc] initWithRootViewController:MYLoginViewController.new];

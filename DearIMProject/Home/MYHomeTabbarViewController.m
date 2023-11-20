@@ -6,12 +6,13 @@
 //
 
 #import "MYHomeTabbarViewController.h"
+#import <MYMVVM/MYMVVM.h>
 #import "MYProfileViewController.h"
-#import "MYChatListViewController.h"
+#import "MYChatPersonListViewController.h"
 
-@interface MYHomeTabbarViewController ()
+@interface MYHomeTabbarViewController () <UITabBarControllerDelegate>
 
-@property (nonatomic, strong) MYChatListViewController *chatVC;/**<  聊天界面 */
+@property (nonatomic, strong) MYChatPersonListViewController *chatVC;/**<  聊天界面 */
 @property (nonatomic, strong) MYProfileViewController *profileVC;/**<  我的 */
 
 @end
@@ -34,8 +35,7 @@
 }
 
 - (void)initData {
-    
-    
+    self.delegate = self;
 }
 
 - (void)initView {
@@ -49,9 +49,15 @@
 }
 
 
-- (MYChatListViewController *)chatVC {
+#pragma mark - UITabBarControllerDelegate
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    self.title = viewController.title;
+}
+
+- (MYChatPersonListViewController *)chatVC {
     if (!_chatVC) {
-        _chatVC = [[MYChatListViewController alloc] init];
+        _chatVC = [[MYChatPersonListViewController alloc] init];
     }
     return _chatVC;
 }

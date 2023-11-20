@@ -1,20 +1,20 @@
 //
-//  MYChatListViewController.m
+//  MYChatPersonListViewController.m
 //  DearIMProject
 //
 //  Created by APPLE on 2023/11/3.
 //
 
-#import "MYChatListViewController.h"
+#import "MYChatPersonListViewController.h"
 #import "MYChatPersonDataSource.h"
 
-@interface MYChatListViewController ()
+@interface MYChatPersonListViewController ()
 
 @property (nonatomic, strong) MYChatPersonDataSource *dataSources;
 
 @end
 
-@implementation MYChatListViewController
+@implementation MYChatPersonListViewController
 
 #pragma mark - dealloc
 #pragma mark - life cycle
@@ -30,9 +30,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"chat".local;
     [self initView];
     [self initData];
-    
 }
 
 - (void)initData {
@@ -52,8 +52,8 @@
 }
 
 - (void)initView {
-    self.view.backgroundColor = UIColor.redColor;
     self.title = @"chat".local;
+    self.tableViewDelegate.dataSource = self.dataSources;
 }
 
 #pragma mark - UITableViewDelegate

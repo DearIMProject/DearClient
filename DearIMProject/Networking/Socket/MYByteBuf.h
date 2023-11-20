@@ -41,6 +41,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)reset;
 
+- (int)length;
+
 @end
 
 NS_ASSUME_NONNULL_END

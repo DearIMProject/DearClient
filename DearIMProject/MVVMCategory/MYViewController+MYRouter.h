@@ -24,12 +24,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)routerURL:(NSString *)routerURL withParam:(NSDictionary *)param;
 
+- (instancetype)initWithParam:(NSDictionary *)param;
+
 @end
 
 #define __MY_ROUTER_REGISTER__ \
 + (void)load { \
     [MYRouter.defaultRouter registerRouter:[self urlName] handlerAction:^BOOL(NSDictionary *dict) { \
-        MYViewController *vc = [[self alloc] init]; \
+        MYViewController *vc = [[self alloc] initWithParam:dict]; \
         [TopViewController().navigationController pushViewController:vc animated:YES]; \
         return YES; \
     }]; \

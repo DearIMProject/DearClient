@@ -176,4 +176,8 @@
     return (int)self.data.length - self.position;
 }
 
+- (int)length {
+    return self.data.length;
+}
+
 @end
