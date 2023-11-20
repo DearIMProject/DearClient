@@ -10,6 +10,7 @@
 #import "MYChatPersonDataSource.h"
 #import "MYChatPersonViewModel.h"
 #import <MYClientDatabase/MYClientDatabase.h>
+#import "MYUserManager.h"
 
 @interface MYChatPersonDataSource ()
 
@@ -29,11 +30,12 @@
 
 - (void)request {
     NSMutableArray *array = [NSMutableArray array];
-    for (int i = 0; i < 10; i++) {
+    NSMutableArray<MYDataChatPerson *> *chatPersons = [theDatabase getAllChatPersonWithUserId:TheUserManager.user.userId];
+    for (MYDataChatPerson *chatPerson in chatPersons) {
         MYChatPersonViewModel *vm = [[MYChatPersonViewModel alloc] init];
-        vm.name = @"一个朋友";
-        vm.msgContent = @"一个消息通知消息通知消息通知消息通知消息通知";
-        vm.iconURL = @"https://img.iplaysoft.com/wp-content/uploads/2019/free-images/free_stock_photo.jpg";
+        vm.name = chatPerson.name;
+//        vm.msgContent;
+        vm.iconURL = chatPerson.iconURL;
         [array addObject:vm];
     }
     self.sectionModel.viewModels = array;

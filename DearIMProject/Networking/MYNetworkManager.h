@@ -9,6 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#define theNetworkManager MYNetworkManager.shared
+
 typedef enum : NSUInteger {
     MYNetworkEnvDaily,
     MYNetworkEnvPrepare,
@@ -22,6 +24,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) MYNetworkEnv env;
 
 + (instancetype)shared;
+
+- (NSString *)getHost;
 
 @end
 

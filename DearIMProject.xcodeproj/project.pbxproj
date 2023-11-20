@@ -45,6 +45,7 @@
 		18C0674E2AF493B900C3DE3D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18C067502AF493B900C3DE3D /* InfoPlist.strings */; };
 		18CCD2A62AD29667000BEBB7 /* MYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CCD2A42AD29667000BEBB7 /* MYLoginViewController.m */; };
 		18CCD2A72AD29667000BEBB7 /* MYLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CCD2A52AD29667000BEBB7 /* MYLoginViewController.xib */; };
+		18FBC7F12B0B35C70083285B /* database.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 18FBC7F02B0B35C70083285B /* database.sqlite */; };
 		2ACF92EBCFBEB20BEDAE1FD2 /* libPods-DearIMProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BDD7D70B0CA461C27531EA7 /* libPods-DearIMProjectTests.a */; };
 		58B8352A62149F74A2EA43A4 /* MYMessageCodec.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B831349AF29A578A13CD87 /* MYMessageCodec.m */; };
 		DEC9D96A2ABD8CB9007BB24F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC9D9692ABD8CB9007BB24F /* AppDelegate.m */; };
@@ -148,6 +149,7 @@
 		18CCD2A32AD29667000BEBB7 /* MYLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYLoginViewController.h; sourceTree = "<group>"; };
 		18CCD2A42AD29667000BEBB7 /* MYLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYLoginViewController.m; sourceTree = "<group>"; };
 		18CCD2A52AD29667000BEBB7 /* MYLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MYLoginViewController.xib; sourceTree = "<group>"; };
+		18FBC7F02B0B35C70083285B /* database.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = database.sqlite; sourceTree = "<group>"; };
 		319C92CEF69A92A5AC61710A /* Pods-DearIMProject-DearIMProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DearIMProject-DearIMProjectUITests.release.xcconfig"; path = "Target Support Files/Pods-DearIMProject-DearIMProjectUITests/Pods-DearIMProject-DearIMProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5186C6F51ED61DD5AA20560C /* Pods-DearIMProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DearIMProject.release.xcconfig"; path = "Target Support Files/Pods-DearIMProject/Pods-DearIMProject.release.xcconfig"; sourceTree = "<group>"; };
 		51EF8D631AA05A431D97D6DE /* Pods-DearIMProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DearIMProject.debug.xcconfig"; path = "Target Support Files/Pods-DearIMProject/Pods-DearIMProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -479,6 +481,7 @@
 		DEC9D9672ABD8CB9007BB24F /* DearIMProject */ = {
 			isa = PBXGroup;
 			children = (
+				18FBC7F02B0B35C70083285B /* database.sqlite */,
 				1882D5422B05E95400BC8AC3 /* Services */,
 				180674152AF37F9A00175CB1 /* Test */,
 				180674112AF37E4000175CB1 /* Home */,
@@ -532,7 +535,7 @@
 				DEC9D9612ABD8CB9007BB24F /* Sources */,
 				DEC9D9622ABD8CB9007BB24F /* Frameworks */,
 				DEC9D9632ABD8CB9007BB24F /* Resources */,
-				269F8244AB9E3ACC75777A21 /* [CP] Copy Pods Resources */,
+				D8E6E84C8E370E9DDD1C2DC0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -609,6 +612,7 @@
 				DEC9D9782ABD8CBA007BB24F /* LaunchScreen.storyboard in Resources */,
 				18C0674E2AF493B900C3DE3D /* InfoPlist.strings in Resources */,
 				1806741D2AF37FCB00175CB1 /* MYTestChatViewController.xib in Resources */,
+				18FBC7F12B0B35C70083285B /* database.sqlite in Resources */,
 				DEC9D9752ABD8CBA007BB24F /* Assets.xcassets in Resources */,
 				DEC9D9732ABD8CB9007BB24F /* Main.storyboard in Resources */,
 				180674042AF370D600175CB1 /* MYRegisterViewController.xib in Resources */,
@@ -627,23 +631,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		269F8244AB9E3ACC75777A21 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DearIMProject/Pods-DearIMProject-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DearIMProject/Pods-DearIMProject-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "xattr -d com.apple.quarantine \"${PODS_ROOT}/Target Support Files/Pods-DearIMProject/Pods-DearIMProject-resources.sh\"\n\"${PODS_ROOT}/Target Support Files/Pods-DearIMProject/Pods-DearIMProject-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B0AE168548A95424D31FC246 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -664,6 +651,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8E6E84C8E370E9DDD1C2DC0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DearIMProject/Pods-DearIMProject-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DearIMProject/Pods-DearIMProject-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DearIMProject/Pods-DearIMProject-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F1F27F91AD415298BF46D004 /* [CP] Check Pods Manifest.lock */ = {

@@ -1,8 +1,12 @@
+# Uncomment the next line to define a global platform for your project
 platform :ios, '15.0'
+#inhibit_all_warnings!
 
 target 'DearIMProject' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  # use_frameworks!
 #  pod 'MYRouter', :git => 'https://github.com/MYBasicUtils/MYRouter.git'
-  pod 'MYRouter', :path => '/Users/apple/Developer/iOS/MYRouter'
+pod 'MYRouter', :path => '/Users/apple/Developer/iOS/MYRouter'
   
 #  pod 'MYMVVM', :git => 'https://github.com/MYBasicUtils/MYMVVM.git'
   pod 'MYMVVM', :path => '/Users/apple/Developer/iOS/MYMVVM'
@@ -22,15 +26,12 @@ target 'DearIMProject' do
   
   pod 'AFNetworking'
   pod 'CocoaAsyncSocket'
-  
-  
+  pod 'MJRefresh'
+  # Pods for DearIMProject
+
   target 'DearIMProjectTests' do
     inherit! :search_paths
     # Pods for testing
   end
-
-#  target 'DearIMProjectUITests' do
-#    # Pods for testing
-#  end
 
 end

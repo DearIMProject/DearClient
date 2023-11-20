@@ -11,6 +11,8 @@
 #import "MYUserManager.h"
 #import "MYHomeTabbarViewController.h"
 #import "ViewController.h"
+#import "MYNetworkManager.h"
+#import "MYSocketManager.h"
 
 @interface MYApplicationManager ()
 
@@ -68,6 +70,10 @@
         self.mainWindow.rootViewController = self.rootViewController;
         [self.mainWindow makeKeyAndVisible];
     }];
+    
+    NSString *apiAddress = @"172.16.92.120";
+    theNetworkManager.host = apiAddress;
+    TheSocket.host = apiAddress;
     return YES;
 }
 

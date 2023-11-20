@@ -15,9 +15,14 @@ PODS:
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
   - CocoaAsyncSocket (7.6.5)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
-  - MYClientDatabase (0.1.0)
+  - MJRefresh (3.7.6)
+  - MYClientDatabase (0.1.0):
+    - FMDB
   - MYIconfont (0.1.0)
   - MYImageCache (0.1.0):
     - SDWebImage
@@ -35,14 +40,15 @@ PODS:
     - MBProgressHUD
     - ReactiveObjC
   - ReactiveObjC (3.1.1)
-  - SDWebImage (5.18.3):
-    - SDWebImage/Core (= 5.18.3)
-  - SDWebImage/Core (5.18.3)
+  - SDWebImage (5.18.5):
+    - SDWebImage/Core (= 5.18.5)
+  - SDWebImage/Core (5.18.5)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking
   - CocoaAsyncSocket
+  - MJRefresh
   - MYClientDatabase (from `../MYClientDatabase`)
   - MYIconfont (from `https://github.com/MYBasicUtils/MYIconfont.git`)
   - MYImageCache (from `/Users/apple/Developer/iOS/MYImageCache`)
@@ -55,8 +61,10 @@ SPEC REPOS:
   trunk:
     - AFNetworking
     - CocoaAsyncSocket
+    - FMDB
     - Masonry
     - MBProgressHUD
+    - MJRefresh
     - ReactiveObjC
     - SDWebImage
     - YYModel
@@ -85,9 +93,11 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
-  MYClientDatabase: d6525171d12fcff70c5b46fe6b454da4c0d9c37b
+  MJRefresh: 2fe7fb43a5167ceda20bb7e63f130c04fd1814a5
+  MYClientDatabase: d0f9ad765dda58c73018a950f99a7c76a213f742
   MYIconfont: a328b874d9605267828243ec224fe56949dc90d4
   MYImageCache: 3910c515f53da3f8fc5322ba3226506230176f8e
   MYMVVM: 9d4d6c6ec04a8af8c9867ede6146c21674c395d0
@@ -95,9 +105,9 @@ SPEC CHECKSUMS:
   MYSkin: b40195bbfcbf0502a279f052005532e6289d5974
   MYUtils: 1442f43627aec8fabf7b2f9ebb8c6be4ca687917
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
-  SDWebImage: 96e0c18ef14010b7485210e92fac888587ebb958
+  SDWebImage: 7ac2b7ddc5e8484c79aa90fc4e30b149d6a2c88f
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 02880bcf3c04dc450f07909e53f8d3e22f3ecca5
+PODFILE CHECKSUM: 04892db36a08a106057bf5761a3f3457a8098ed9
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.14.3

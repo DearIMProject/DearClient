@@ -6,6 +6,7 @@
 //
 
 #import "MYChatPersonListViewController.h"
+#import <MJRefresh/MJRefresh.h>
 #import "MYChatPersonDataSource.h"
 
 @interface MYChatPersonListViewController ()
@@ -40,11 +41,13 @@
     [MBProgressHUD showLoadingToView:self.view];
     self.dataSources.successBlock = ^{
         @strongify(self);
+        [self.tableView.mj_header endRefreshing];
         [MBProgressHUD hideHUDForView:self.view];
         [self.tableView reloadData];
     };
     self.dataSources.failureBlock = ^(NSError * _Nonnull error) {
         @strongify(self);
+        [self.tableView.mj_header endRefreshing];
         [MBProgressHUD hideHUDForView:self.view];
         [MBProgressHUD showError:error.domain toView:self.view];
     };
@@ -54,6 +57,11 @@
 - (void)initView {
     self.title = @"chat".local;
     self.tableViewDelegate.dataSource = self.dataSources;
+    @weakify(self);
+    self.tableView.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
+        @strongify(self);
+        [self.dataSources request];
+    }];
 }
 
 #pragma mark - UITableViewDelegate

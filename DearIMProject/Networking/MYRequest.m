@@ -38,7 +38,7 @@ typedef enum : NSUInteger {
                success:(void (^)(NSDictionary *result))success
                failure:(void (^)(NSError *error))failure {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    NSString *url = [NSString stringWithFormat:@"%@%@%@",MYNetworkManager.shared.host,apiName,version];
+    NSString *url = [NSString stringWithFormat:@"%@%@%@",MYNetworkManager.shared.getHost,apiName,version];
     NSDictionary *hearder;
     NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:self.baseParam];
     [dict addEntriesFromDictionary:param];
