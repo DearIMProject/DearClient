@@ -9,13 +9,6 @@
 
 @implementation MYUser
 
-+ (NSDictionary *)modelCustomPropertyMapper {
-    return @{
-             @"userId" : @"id",
-             };
-}
-
-
 - (instancetype)initWithCoder:(NSCoder *)coder {
     if (self = [super init]) {
         self.userId = [coder decodeInt64ForKey:@"userId"];

@@ -9,7 +9,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class MYChatPersonViewModel;
+
 @interface MYChatMessageDataSource : MYDataSource
+
+@property (nonatomic, strong) MYChatPersonViewModel *viewModel;
 
 @end
 

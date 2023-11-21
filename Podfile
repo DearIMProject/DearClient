@@ -22,7 +22,10 @@ pod 'MYRouter', :path => '/Users/apple/Developer/iOS/MYRouter'
   
   pod 'MYIconfont', :git => 'https://github.com/MYBasicUtils/MYIconfont.git'
   
+#  pod 'MYClientDatabase', :git => 'https://github.com/DearIMProject/MYClientDatabase.git'
   pod 'MYClientDatabase', :path => '../MYClientDatabase'
+  
+  pod 'MYUIKit', :path => '../MYUIKit'
   
   pod 'AFNetworking'
   pod 'CocoaAsyncSocket'

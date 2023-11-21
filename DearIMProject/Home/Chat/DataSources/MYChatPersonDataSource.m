@@ -30,16 +30,14 @@
 
 - (void)request {
     NSMutableArray *array = [NSMutableArray array];
-    NSMutableArray<MYDataChatPerson *> *chatPersons = [theDatabase getAllChatPersonWithUserId:TheUserManager.user.userId];
+    long userId = TheUserManager.user.userId;
+    NSArray<MYDataChatPerson *> *chatPersons = [theDatabase getAllChatPersonWithUserId:userId];
     for (MYDataChatPerson *chatPerson in chatPersons) {
         MYChatPersonViewModel *vm = [[MYChatPersonViewModel alloc] init];
-        vm.name = chatPerson.name;
-//        vm.msgContent;
-        vm.iconURL = chatPerson.iconURL;
+        [vm convertFromDBModel:chatPerson];
         [array addObject:vm];
     }
     self.sectionModel.viewModels = array;
-    [theDatabase getChatMessageWithPerson:0];
     if (self.successBlock) self.successBlock();
 }
 

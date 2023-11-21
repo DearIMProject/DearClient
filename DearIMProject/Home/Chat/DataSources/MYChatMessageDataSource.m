@@ -7,7 +7,9 @@
 
 #import "MYChatMessageDataSource.h"
 #import "MYChatMessageViewModel.h"
+#import <MYClientDatabase/MYClientDatabase.h>
 
+#import "MYChatPersonViewModel.h"
 
 @interface MYChatMessageDataSource ()
 
@@ -28,21 +30,18 @@
 }
 
 - (void)request {
-    NSMutableArray *array = [NSMutableArray array];
-    for (int i = 0; i < 20; i++) {
+    NSMutableArray<MYChatMessageViewModel *> *vms = [NSMutableArray array];
+    NSArray<MYDataMessage *> *dataMessages = [theDatabase getChatMessageWithPerson:self.viewModel.userId];
+    for (MYDataMessage *dataMessage in dataMessages) {
         MYChatMessageViewModel *vm = [[MYChatMessageViewModel alloc] init];
-        int count = arc4random() % 100;
-        NSMutableString *content = [NSMutableString string];
-        for (int i = 0; i < count; i++) {
-            [content appendString:@"1"];
-        }
-        vm.content = content;
-        [array addObject:vm];
+        [vm convertWithDataModel:dataMessage];
+        [vms addObject:vm];
     }
-    self.sectionModel.viewModels = array;
+    self.sectionModel.viewModels = vms;
     if (self.successBlock) {
         self.successBlock();
     }
 }
+
 
 @end

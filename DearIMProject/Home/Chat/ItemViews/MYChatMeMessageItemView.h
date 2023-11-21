@@ -1,15 +1,15 @@
 //
-//  MYChatMessageItemView.h
+//  MYChatMeMessageItemView.h
 //  DearIMProject
 //
 //  Created by APPLE on 2023/11/17.
 //
 
-#import "MYItemView.h"
+#import <MYMVVM/MYMVVM.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MYChatMessageItemView : MYItemView
+@interface MYChatMeMessageItemView : MYItemView
 
 @end
 

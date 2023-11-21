@@ -22,12 +22,14 @@ __MY_ROUTER_REGISTER__
 - (instancetype)initWithParam:(NSDictionary *)param {
     if (self = [super initWithParam:param]) {
         self.viewModel = param[@"viewModel"];
+        self.datasource.viewModel = self.viewModel;
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = kPageBackgroundColor;
     [self initView];
     [self initData];
 }

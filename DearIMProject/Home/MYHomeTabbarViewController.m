@@ -24,6 +24,7 @@
         self.viewControllers = @[self.chatVC,self.profileVC];
         [self addChildViewController:self.chatVC];
         [self addChildViewController:self.profileVC];
+        self.title = self.chatVC.title;
     }
     return self;
 }

@@ -36,6 +36,7 @@ PODS:
   - MYRouter (0.1.0)
   - MYSkin (0.1.0):
     - YYModel
+  - MYUIKit (0.1.0)
   - MYUtils (0.1.0):
     - MBProgressHUD
     - ReactiveObjC
@@ -55,6 +56,7 @@ DEPENDENCIES:
   - MYMVVM (from `/Users/apple/Developer/iOS/MYMVVM`)
   - MYRouter (from `/Users/apple/Developer/iOS/MYRouter`)
   - MYSkin (from `/Users/apple/Developer/iOS/MYSkin`)
+  - MYUIKit (from `../MYUIKit`)
   - MYUtils (from `/Users/apple/Developer/iOS/MYUtils`)
 
 SPEC REPOS:
@@ -82,6 +84,8 @@ EXTERNAL SOURCES:
     :path: "/Users/apple/Developer/iOS/MYRouter"
   MYSkin:
     :path: "/Users/apple/Developer/iOS/MYSkin"
+  MYUIKit:
+    :path: "../MYUIKit"
   MYUtils:
     :path: "/Users/apple/Developer/iOS/MYUtils"
 
@@ -103,11 +107,12 @@ SPEC CHECKSUMS:
   MYMVVM: 9d4d6c6ec04a8af8c9867ede6146c21674c395d0
   MYRouter: e83ca93fb3d2aab45d4ece6e67e12c165b6486fa
   MYSkin: b40195bbfcbf0502a279f052005532e6289d5974
+  MYUIKit: ed424ef4901947404845ca85c99f9fea2eea3a1d
   MYUtils: 1442f43627aec8fabf7b2f9ebb8c6be4ca687917
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SDWebImage: 7ac2b7ddc5e8484c79aa90fc4e30b149d6a2c88f
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 04892db36a08a106057bf5761a3f3457a8098ed9
+PODFILE CHECKSUM: db783a259c525cd742b785aa477f90c4ee35b0f5
 
 COCOAPODS: 1.14.3

@@ -22,6 +22,7 @@
 
 - (instancetype)init {
     if (self = [super init]) {
+        self.title = @"chat".local;
         self.tabBarItem.title = @"chat".local;
         self.tabBarItem.image = [UIImage systemImageNamed:@"lanyardcard"];
         self.tabBarItem.selectedImage = [UIImage systemImageNamed:@"lanyardcard.fill"];
@@ -31,7 +32,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"chat".local;
     [self initView];
     [self initData];
 }

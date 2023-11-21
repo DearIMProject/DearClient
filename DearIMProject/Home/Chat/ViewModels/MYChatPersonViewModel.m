@@ -16,5 +16,10 @@
 - (CGSize)itemSize {
     return CGSizeMake(0, 64);
 }
+- (void)convertFromDBModel:(MYDataChatPerson *)chatPerson {
+    self.name = chatPerson.name;
+    self.iconURL = chatPerson.iconURL;
+    self.userId = chatPerson.userId;
+}
 
 @end

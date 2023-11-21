@@ -39,7 +39,7 @@ __MY_ROUTER_REGISTER__
                                              object:nil];
     self.navigationController.navigationBar.translucent = YES;
 #if DEBUG
-    self.nameTextField.text = @"apple1@apple.com";
+    self.nameTextField.text = @"apple@apple.com";
     self.passwordTextField.text = @"apple";
 #endif
 }
