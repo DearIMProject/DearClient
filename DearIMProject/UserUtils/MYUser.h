@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *email;/**<  邮箱 */
 @property (nonatomic, strong) NSString *os;/**< 型号  */
 @property (nonatomic, strong) NSString *token;
+@property (nonatomic, strong) NSString *iconURL;/**< 头像  */ 
 @property (nonatomic, assign) long expireTime;
 @property (nonatomic, assign) BOOL vipStatus;
 @property (nonatomic, assign) NSTimeInterval vipExpired;

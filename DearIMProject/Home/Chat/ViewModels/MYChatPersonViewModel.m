@@ -6,6 +6,7 @@
 //
 
 #import "MYChatPersonViewModel.h"
+#import "MYUser+MYConvert.h"
 
 @implementation MYChatPersonViewModel
 
@@ -16,10 +17,18 @@
 - (CGSize)itemSize {
     return CGSizeMake(0, 64);
 }
-- (void)convertFromDBModel:(MYDataChatPerson *)chatPerson {
-    self.name = chatPerson.name;
-    self.iconURL = chatPerson.iconURL;
-    self.userId = chatPerson.userId;
+- (void)convertFromDBModel:(MYDBUser *)chatPerson {
+    //TODO: wmy 将chatPerson 转为user
+    MYUser *user = [MYUser convertFromDBModel:chatPerson];
+    [self converFromUser:user];
+    
+}
+
+- (void)converFromUser:(MYUser *)user {
+    self.model = user;
+    self.name = user.name;
+    self.iconURL = user.iconURL;
+    self.userId = user.userId;
 }
 
 @end

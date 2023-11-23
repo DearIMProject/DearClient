@@ -7,7 +7,7 @@
 
 #import "MYViewModel.h"
 #import <MYClientDatabase/MYClientDatabase.h>
-
+#import "MYUser.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MYChatPersonViewModel : MYViewModel
@@ -18,7 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) long long userId;
 
-- (void)convertFromDBModel:(MYDataChatPerson *)model;
+@property (nonatomic, strong) MYUser *model;/**< model  */
+
+- (void)convertFromDBModel:(MYDBUser *)model;
 
 @end
 

@@ -6,6 +6,8 @@
 //
 
 #import "MYDataSource.h"
+#import "MYMessage.h"
+#import "MYUser.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MYChatMessageDataSource : MYDataSource
 
 @property (nonatomic, strong) MYChatPersonViewModel *viewModel;
+
+- (void)addChatMessage:(MYMessage *)message byUser:(MYUser *)user;
 
 @end
 

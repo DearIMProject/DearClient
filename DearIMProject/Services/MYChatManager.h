@@ -11,6 +11,9 @@
 // 5.
 
 #import <Foundation/Foundation.h>
+#import "MYUser.h"
+#import "MYMessageEnum.h"
+#import "MYMessage.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,11 +22,27 @@ NS_ASSUME_NONNULL_BEGIN
 FOUNDATION_EXPORT NSString *const CHAT_CONNECT_SUCCESS;
 FOUNDATION_EXPORT NSString *const CHAT_CONNECT_FAILURE;
 
+@class MYChatManager;
+
+
+@protocol MYChatManagerDelegate <NSObject>
+
+- (void)chatManager:(MYChatManager *)manager didReceiveMessage:(MYMessage *)message fromUser:(MYUser *)user;
+
+@end
+
+
 @interface MYChatManager : NSObject
 
 + (instancetype)defaultChatManager;
 
 - (void)initChat;
+
+- (void)sendContext:(NSString *)content toUser:(MYUser *)user withMsgType:(MYMessageType)msgType;
+
+- (void)addChatDelegate:(id<MYChatManagerDelegate>)delegate;
+
+- (void)removeChatDelegate:(id<MYChatManagerDelegate>)delegate;
 
 @end
 

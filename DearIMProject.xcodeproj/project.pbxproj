@@ -22,6 +22,8 @@
 		1806741C2AF37FCB00175CB1 /* MYTestChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1806741A2AF37FCB00175CB1 /* MYTestChatViewController.m */; };
 		1806741D2AF37FCB00175CB1 /* MYTestChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1806741B2AF37FCB00175CB1 /* MYTestChatViewController.xib */; };
 		180674272AF3868400175CB1 /* MYSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 180674262AF3868400175CB1 /* MYSocketManager.m */; };
+		1808F83B2B0DDE28001A2A68 /* MYUser+MYConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 1808F83A2B0DDE28001A2A68 /* MYUser+MYConvert.m */; };
+		1808F83E2B0EDF80001A2A68 /* MYMessage+MYConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 1808F83D2B0EDF80001A2A68 /* MYMessage+MYConvert.m */; };
 		1882D5462B05EA1900BC8AC3 /* MYChatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1882D5452B05EA1900BC8AC3 /* MYChatManager.m */; };
 		1882D5492B05EBAD00BC8AC3 /* MYLoginRequestMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1882D5482B05EBAD00BC8AC3 /* MYLoginRequestMessage.m */; };
 		1882D54C2B05EC7000BC8AC3 /* MYMessageFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1882D54B2B05EC7000BC8AC3 /* MYMessageFactory.m */; };
@@ -46,6 +48,7 @@
 		18CCD2A62AD29667000BEBB7 /* MYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CCD2A42AD29667000BEBB7 /* MYLoginViewController.m */; };
 		18CCD2A72AD29667000BEBB7 /* MYLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CCD2A52AD29667000BEBB7 /* MYLoginViewController.xib */; };
 		18F5E5EA2B0CAACB00B5C063 /* MYChatAnotherMessageItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F5E5E92B0CAACB00B5C063 /* MYChatAnotherMessageItemView.m */; };
+		18F5E5EE2B0D8C2B00B5C063 /* MYChatTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F5E5ED2B0D8C2B00B5C063 /* MYChatTextView.m */; };
 		2ACF92EBCFBEB20BEDAE1FD2 /* libPods-DearIMProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BDD7D70B0CA461C27531EA7 /* libPods-DearIMProjectTests.a */; };
 		58B8352A62149F74A2EA43A4 /* MYMessageCodec.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B831349AF29A578A13CD87 /* MYMessageCodec.m */; };
 		DEC9D96A2ABD8CB9007BB24F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC9D9692ABD8CB9007BB24F /* AppDelegate.m */; };
@@ -98,6 +101,10 @@
 		1806741B2AF37FCB00175CB1 /* MYTestChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MYTestChatViewController.xib; sourceTree = "<group>"; };
 		180674252AF3868400175CB1 /* MYSocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYSocketManager.h; sourceTree = "<group>"; };
 		180674262AF3868400175CB1 /* MYSocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYSocketManager.m; sourceTree = "<group>"; };
+		1808F8392B0DDE28001A2A68 /* MYUser+MYConvert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MYUser+MYConvert.h"; sourceTree = "<group>"; };
+		1808F83A2B0DDE28001A2A68 /* MYUser+MYConvert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MYUser+MYConvert.m"; sourceTree = "<group>"; };
+		1808F83C2B0EDF80001A2A68 /* MYMessage+MYConvert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MYMessage+MYConvert.h"; sourceTree = "<group>"; };
+		1808F83D2B0EDF80001A2A68 /* MYMessage+MYConvert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MYMessage+MYConvert.m"; sourceTree = "<group>"; };
 		1882D5442B05EA1900BC8AC3 /* MYChatManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYChatManager.h; sourceTree = "<group>"; };
 		1882D5452B05EA1900BC8AC3 /* MYChatManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYChatManager.m; sourceTree = "<group>"; };
 		1882D5472B05EBAD00BC8AC3 /* MYLoginRequestMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYLoginRequestMessage.h; sourceTree = "<group>"; };
@@ -151,6 +158,8 @@
 		18CCD2A52AD29667000BEBB7 /* MYLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MYLoginViewController.xib; sourceTree = "<group>"; };
 		18F5E5E82B0CAACB00B5C063 /* MYChatAnotherMessageItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYChatAnotherMessageItemView.h; sourceTree = "<group>"; };
 		18F5E5E92B0CAACB00B5C063 /* MYChatAnotherMessageItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYChatAnotherMessageItemView.m; sourceTree = "<group>"; };
+		18F5E5EC2B0D8C2B00B5C063 /* MYChatTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYChatTextView.h; sourceTree = "<group>"; };
+		18F5E5ED2B0D8C2B00B5C063 /* MYChatTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYChatTextView.m; sourceTree = "<group>"; };
 		319C92CEF69A92A5AC61710A /* Pods-DearIMProject-DearIMProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DearIMProject-DearIMProjectUITests.release.xcconfig"; path = "Target Support Files/Pods-DearIMProject-DearIMProjectUITests/Pods-DearIMProject-DearIMProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5186C6F51ED61DD5AA20560C /* Pods-DearIMProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DearIMProject.release.xcconfig"; path = "Target Support Files/Pods-DearIMProject/Pods-DearIMProject.release.xcconfig"; sourceTree = "<group>"; };
 		51EF8D631AA05A431D97D6DE /* Pods-DearIMProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DearIMProject.debug.xcconfig"; path = "Target Support Files/Pods-DearIMProject/Pods-DearIMProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -302,6 +311,17 @@
 			path = Socket;
 			sourceTree = "<group>";
 		};
+		1808F8382B0DDE18001A2A68 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1808F8392B0DDE28001A2A68 /* MYUser+MYConvert.h */,
+				1808F83A2B0DDE28001A2A68 /* MYUser+MYConvert.m */,
+				1808F83C2B0EDF80001A2A68 /* MYMessage+MYConvert.h */,
+				1808F83D2B0EDF80001A2A68 /* MYMessage+MYConvert.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		1882D5422B05E95400BC8AC3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +349,8 @@
 		1882D5502B06131100BC8AC3 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				1808F8382B0DDE18001A2A68 /* Models */,
+				18F5E5EB2B0D8C1600B5C063 /* Views */,
 				1882D56F2B0705AE00BC8AC3 /* ItemViews */,
 				1882D5562B06134E00BC8AC3 /* DataSources */,
 				1882D5522B06132900BC8AC3 /* ViewModels */,
@@ -446,6 +468,15 @@
 				1806740C2AF3781F00175CB1 /* VCs */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		18F5E5EB2B0D8C1600B5C063 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				18F5E5EC2B0D8C2B00B5C063 /* MYChatTextView.h */,
+				18F5E5ED2B0D8C2B00B5C063 /* MYChatTextView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		7B0DBA7DB9EC8CF25CB993FF /* Pods */ = {
@@ -700,15 +731,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1808F83B2B0DDE28001A2A68 /* MYUser+MYConvert.m in Sources */,
 				1882D5492B05EBAD00BC8AC3 /* MYLoginRequestMessage.m in Sources */,
 				180673EF2AF34D6300175CB1 /* MYUser.m in Sources */,
 				18F5E5EA2B0CAACB00B5C063 /* MYChatAnotherMessageItemView.m in Sources */,
 				180674102AF3785E00175CB1 /* MYLoginService.m in Sources */,
+				1808F83E2B0EDF80001A2A68 /* MYMessage+MYConvert.m in Sources */,
 				180673F72AF34FC400175CB1 /* MYApplicationManager.m in Sources */,
 				1882D54C2B05EC7000BC8AC3 /* MYMessageFactory.m in Sources */,
 				180673E62AF34B2600175CB1 /* MYUserManager.m in Sources */,
 				180674142AF37F2E00175CB1 /* MYHomeViewController.m in Sources */,
 				1882D57E2B0711EB00BC8AC3 /* MYChatMessageViewModel.m in Sources */,
+				18F5E5EE2B0D8C2B00B5C063 /* MYChatTextView.m in Sources */,
 				1882D5552B06134300BC8AC3 /* MYChatPersonViewModel.m in Sources */,
 				18C067442AF4929200C3DE3D /* MYChatPersonListViewController.m in Sources */,
 				1882D56B2B06F5B100BC8AC3 /* MYProfileItemView.m in Sources */,

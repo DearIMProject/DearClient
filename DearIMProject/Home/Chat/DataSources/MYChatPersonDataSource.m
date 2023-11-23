@@ -31,8 +31,8 @@
 - (void)request {
     NSMutableArray *array = [NSMutableArray array];
     long userId = TheUserManager.user.userId;
-    NSArray<MYDataChatPerson *> *chatPersons = [theDatabase getAllChatPersonWithUserId:userId];
-    for (MYDataChatPerson *chatPerson in chatPersons) {
+    NSArray<MYDBUser *> *chatPersons = [theDatabase getAllChatPersonWithUserId:userId];
+    for (MYDBUser *chatPerson in chatPersons) {
         MYChatPersonViewModel *vm = [[MYChatPersonViewModel alloc] init];
         [vm convertFromDBModel:chatPerson];
         [array addObject:vm];

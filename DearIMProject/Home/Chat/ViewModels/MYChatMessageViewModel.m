@@ -12,7 +12,7 @@
 
 @interface MYChatMessageViewModel ()
 
-@property(nonatomic, weak) MYDataChatPerson *dataChatPerson;
+@property(nonatomic, weak) MYDBUser *dataChatPerson;
 @property(nonatomic, assign) long fromId;/**<  消息发送方 */
 
 @end
@@ -30,7 +30,7 @@
     self.content = dbModel.content;
     self.fromId = dbModel.fromId;
     //TODO: wmy 通过通讯录获取icon
-    self.dataChatPerson = [theChatPersonManager chatPersonWithUserId:dbModel.fromId];
+    self.dataChatPerson = [theChatUserManager chatPersonWithUserId:dbModel.fromId];
 }
 
 - (NSString *)iconURL {

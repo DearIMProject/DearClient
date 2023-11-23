@@ -66,6 +66,9 @@ static MYSocketManager *__onetimeClass;
             }
         }
     }// end of if
+    if (error) {
+        NSLog(@"😭😭😭😭😭😭通道连接失败：host:%@,port:%ld",self.host,(long)self.port);
+    }
 }
 
 - (void)disConnect {
@@ -91,6 +94,7 @@ static MYSocketManager *__onetimeClass;
 }
 
 - (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(uint16_t)port {
+    NSLog(@"😄😄😄😄😄通道连接成功！！！！");
     if ([host isEqualToString:self.host] && port == self.port) {
         for (id<MYSocketManagerDelegate> delegate in self.delegates) {
             if ([delegate respondsToSelector:@selector(didConnectSuccess:)]) {
@@ -110,7 +114,7 @@ static MYSocketManager *__onetimeClass;
 }
 
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag {
-    NSLog(@"接收到data: %@",data);
+    NSLog(@"😯接收到data: %@",data);
     for (id<MYSocketManagerDelegate> delegate in self.delegates) {
         if ([delegate respondsToSelector:@selector(didReceiveOnManager:message:)]) {            
             [delegate didReceiveOnManager:self message:[self.msgCodec decodeWithData:data]];

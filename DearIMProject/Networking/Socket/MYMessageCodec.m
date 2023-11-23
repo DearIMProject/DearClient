@@ -80,8 +80,8 @@ static int VERSION = 1;
         return nil;
     }
     
-    int dataLength = [data readInt];
-    NSLog(@"dataLength");
+//    int dataLength = [data readInt];
+//    NSLog(@"dataLength");
     
     int magic_number = [data readInt];
     if (magic_number != MAGIC_NUMBER) {

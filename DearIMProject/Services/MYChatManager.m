@@ -9,6 +9,7 @@
 #import "MYUserManager.h"
 #import "MYSocketManager.h"
 #import "MYMessageFactory.h"
+#import "MYUser+MYConvert.h"
 
 static int MAGIC_NUMBER = 891013;
 
@@ -16,6 +17,8 @@ NSString *const CHAT_CONNECT_SUCCESS = @"CHAT_CONNECT_SUCCESS";
 NSString *const CHAT_CONNECT_FAILURE = @"CHAT_CONNECT_FAILURE";
 
 @interface MYChatManager () <MYSocketManagerDelegate>
+
+@property (nonatomic, strong) NSMutableArray<id<MYChatManagerDelegate>> *delegateArray;
 
 @end
 
@@ -38,12 +41,25 @@ static MYChatManager *__onetimeClass;
         [NSNotificationCenter.defaultCenter addObserver:self
                                                selector:@selector(onReceiveLoginNotification)
                                                    name:AUTO_LOGIN_SUCCESS_NOTIFICATION object:nil];
+        _delegateArray = [NSMutableArray array];
     }
     return self;
 }
 
 - (void)initChat {
     //TODO: wmy
+}
+
+- (void)addChatDelegate:(id<MYChatManagerDelegate>)delegate {
+    if (![self.delegateArray containsObject:delegate]) {
+        [self.delegateArray addObject:delegate];
+    }
+}
+
+- (void)removeChatDelegate:(id<MYChatManagerDelegate>)delegate {
+    if ([self.delegateArray containsObject:delegate]) {
+        [self.delegateArray removeObject:delegate];
+    }
 }
 
 #pragma mark - MYSocketManagerDelegate
@@ -70,17 +86,32 @@ static MYChatManager *__onetimeClass;
             //success
             [NSNotificationCenter.defaultCenter postNotificationName:CHAT_CONNECT_SUCCESS object:nil];
         } else {
+            //TODO: wmy 重试机制
             NSLog(@"connect failure:%@",content);
+            [NSNotificationCenter.defaultCenter postNotificationName:CHAT_CONNECT_FAILURE object:nil];
+        }
+    } else if (message.messageType == MYMessageType_CHAT_MESSAGE){
+        for (id<MYChatManagerDelegate> delegate in self.delegateArray) {
+            if ([delegate respondsToSelector:@selector(chatManager:didReceiveMessage:fromUser:)]) {
+                MYUser *user = [MYUser convertFromDBModel:[theChatUserManager chatPersonWithUserId:message.fromId]];
+                [delegate chatManager:self didReceiveMessage:message fromUser:user];
+            }
         }
     }
+}
+
+- (void)sendContext:(NSString *)content toUser:(MYUser *)user withMsgType:(MYMessageType)msgType {
+    MYMessage *message = [MYMessageFactory messageWithMesssageType:msgType];
+    message.content = content;
+    message.toId = user.userId;
+    message.toEntity = MYMessageEntiteyType_USER;
+    [TheSocket sendMessage:message];
 }
 
 #pragma mark - notification
 
 - (void)onReceiveLoginNotification {
     //1. 开启长连接
-    TheSocket.host = @"172.16.92.59";
-    TheSocket.port = 9999;
     [TheSocket addDelegate:self];
     [TheSocket connect];
 }

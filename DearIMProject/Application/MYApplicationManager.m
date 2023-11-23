@@ -7,12 +7,14 @@
 
 #import "MYApplicationManager.h"
 #import <MYMVVM/MYMVVM.h>
+#import <IQKeyboardManager/IQKeyboardManager.h>
 #import "MYLoginViewController.h"
 #import "MYUserManager.h"
 #import "MYHomeTabbarViewController.h"
 #import "ViewController.h"
 #import "MYNetworkManager.h"
 #import "MYSocketManager.h"
+#import "MYChatManager.h"
 
 @interface MYApplicationManager ()
 
@@ -29,6 +31,15 @@
         instance = [[[self class] alloc] init];
     });
     return instance;
+}
+
+- (instancetype)init {
+    if (self = [super init]) {
+        [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
+        [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
+        [theChatManager initChat];
+    }
+    return self;
 }
 
 - (void)refreshRootViewController {
@@ -49,7 +60,7 @@
         return navi;
     }
     MYNavigationViewController *navi =
-    [[MYNavigationViewController alloc] initWithRootViewController:MYLoginViewController.new];
+            [[MYNavigationViewController alloc] initWithRootViewController:MYLoginViewController.new];
     self.naviController = navi;
     return navi;
 }
@@ -59,18 +70,19 @@
 }
 
 #pragma mark - appdelegate
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //用户自动登录
     @weakify(self);
     [TheUserManager checkAutoLoginWithSuccess:^{
 //        [MBProgressHUD showSuccess:@"login_success".local toView:self.mainWindow];
-    } failure:^(NSError * _Nonnull error) {
+    }                                 failure:^(NSError *_Nonnull error) {
         @strongify(self);
 //        [MBProgressHUD showError:error.description toView:self.mainWindow];
         self.mainWindow.rootViewController = self.rootViewController;
         [self.mainWindow makeKeyAndVisible];
     }];
-    
+
     NSString *apiAddress = @"172.16.92.120";
     theNetworkManager.host = apiAddress;
     TheSocket.host = apiAddress;

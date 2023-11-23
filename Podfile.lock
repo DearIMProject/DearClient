@@ -18,6 +18,7 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
+  - IQKeyboardManager (6.5.16)
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.7.6)
@@ -49,6 +50,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - CocoaAsyncSocket
+  - IQKeyboardManager
   - MJRefresh
   - MYClientDatabase (from `../MYClientDatabase`)
   - MYIconfont (from `https://github.com/MYBasicUtils/MYIconfont.git`)
@@ -64,6 +66,7 @@ SPEC REPOS:
     - AFNetworking
     - CocoaAsyncSocket
     - FMDB
+    - IQKeyboardManager
     - Masonry
     - MBProgressHUD
     - MJRefresh
@@ -98,6 +101,7 @@ SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  IQKeyboardManager: 024b54d7dcb765c5bc99882cb4d5ea24a8cb7c3c
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 2fe7fb43a5167ceda20bb7e63f130c04fd1814a5
@@ -113,6 +117,6 @@ SPEC CHECKSUMS:
   SDWebImage: 7ac2b7ddc5e8484c79aa90fc4e30b149d6a2c88f
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: db783a259c525cd742b785aa477f90c4ee35b0f5
+PODFILE CHECKSUM: 82cbf62af7e0e3d7c6226af07eb80f16189d2b21
 
 COCOAPODS: 1.14.3
