@@ -76,14 +76,9 @@ static MYSocketManager *__onetimeClass;
 }
 
 - (void)sendMessage:(MYMessage *)message {
-    //TODO: wmy test
-//    {
-//        NSData *data = [message.content dataUsingEncoding:NSUTF8StringEncoding];
-//        [_asyncSocket writeData:data withTimeout:-1 tag:0];
-//    }
     NSData *data = [self.msgCodec encodeWithMessage:message];
     NSLog(@"data = %@",data);
-    [_asyncSocket writeData:data withTimeout:-1 tag:0];
+    [_asyncSocket writeData:data withTimeout:-1 tag:message.timestamp];
 }
 
 
@@ -107,8 +102,8 @@ static MYSocketManager *__onetimeClass;
 
 - (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag {
     for (id<MYSocketManagerDelegate> delegate in self.delegates) {
-        if ([delegate respondsToSelector:@selector(didWriteDataSuccess:)]) {
-            [delegate didWriteDataSuccess:self];
+        if ([delegate respondsToSelector:@selector(didWriteDataSuccess:tag:)]) {
+            [delegate didWriteDataSuccess:self tag:tag];
         }
     }
 }

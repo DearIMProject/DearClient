@@ -10,7 +10,7 @@
 
 @interface MYByteBuf ()
 
-@property (nonatomic, assign) unsigned int capacity;/**<  容量 */
+@property (nonatomic, assign) unsigned long capacity;/**<  容量 */
 @property (nonatomic, assign) int limit;/**<  写入限制 */
 @property (nonatomic, assign) int position;/**<  读取位置 */
 @property (nonatomic, strong) NSMutableData *data;/**<  放入的内容 */
@@ -19,7 +19,7 @@
 
 @implementation MYByteBuf
 
-- (instancetype)initWithCapacity:(unsigned int)capacity {
+- (instancetype)initWithCapacity:(unsigned long)capacity {
     if (self = [super init]) {
         _capacity = capacity;
         _position = 0;
@@ -177,7 +177,17 @@
 }
 
 - (int)length {
-    return self.data.length;
+    return (int)self.data.length;
+}
+
+- (MYByteBuf *)sliceWithIndex:(int)index length:(int)length {
+    //TODO: wmy 仅仅为功能实现，之后再做data数据的复用
+    MYByteBuf *bytebuf = [[MYByteBuf alloc] initWithCapacity:length];
+    Byte bytes[length];
+    [self.data getBytes:&bytes range:NSMakeRange(index, length)];
+    [bytebuf.data appendBytes:bytes length:length];
+    return bytebuf;
 }
 
 @end
+

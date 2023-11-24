@@ -45,7 +45,7 @@
     //TODO: wmy 域名加密
     switch (env) {
         case MYNetworkEnvDaily:
-            self.host = @"172.16.92.120";
+            self.host = @"172.16.92.113";
             break;
         case MYNetworkEnvPrepare:
             //TODO: wmy 域名加密

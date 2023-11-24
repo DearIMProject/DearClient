@@ -28,6 +28,7 @@ FOUNDATION_EXPORT NSString *const CHAT_CONNECT_FAILURE;
 @protocol MYChatManagerDelegate <NSObject>
 
 - (void)chatManager:(MYChatManager *)manager didReceiveMessage:(MYMessage *)message fromUser:(MYUser *)user;
+- (void)chatManager:(MYChatManager *)manager sendMessageSuccessWithTag:(long)tag;
 
 @end
 

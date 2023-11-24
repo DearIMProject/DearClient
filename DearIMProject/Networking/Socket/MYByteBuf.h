@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)init NS_UNAVAILABLE ;
 
-- (instancetype)initWithCapacity:(unsigned int)capacity NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithCapacity:(unsigned long)capacity NS_DESIGNATED_INITIALIZER;
 
 - (instancetype)initWithData:(NSData *)data NS_DESIGNATED_INITIALIZER;
 
@@ -42,6 +42,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)reset;
 
 - (int)length;
+
+- (MYByteBuf *)sliceWithIndex:(int)index length:(int)length;
 
 @end
 

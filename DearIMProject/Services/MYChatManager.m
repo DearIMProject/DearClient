@@ -75,8 +75,12 @@ static MYChatManager *__onetimeClass;
     
 }
 
-- (void)didWriteDataSuccess:(MYSocketManager *)manager {
-    
+- (void)didWriteDataSuccess:(MYSocketManager *)manager tag:(long)tag {
+    for (id<MYChatManagerDelegate> delegate in self.delegateArray) {
+        if ([delegate respondsToSelector:@selector(chatManager:sendMessageSuccessWithTag:)]) {
+            [delegate chatManager:self sendMessageSuccessWithTag:tag];
+        }
+    }
 }
 
 - (void)didReceiveOnManager:(MYSocketManager *)manager message:(MYMessage *)message {

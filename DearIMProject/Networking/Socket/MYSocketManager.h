@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)didConnectSuccess:(MYSocketManager *)manager;
 - (void)didConnectFailure:(MYSocketManager *)manager error:(NSError *)error;
 
-- (void)didWriteDataSuccess:(MYSocketManager *)manager;
+- (void)didWriteDataSuccess:(MYSocketManager *)manager tag:(long)tag;
 
 - (void)didReceiveOnManager:(MYSocketManager *)manager message:(MYMessage *)message;
 

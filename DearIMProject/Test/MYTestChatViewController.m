@@ -7,6 +7,7 @@
 
 #import "MYTestChatViewController.h"
 #import "MYSocketManager.h"
+#import "MYViewController+MYRouter.h"
 
 @interface MYTestChatViewController () <MYSocketManagerDelegate>
 
@@ -21,6 +22,8 @@
 @end
 
 @implementation MYTestChatViewController
+
+__MY_ROUTER_REGISTER__
 
 - (void)dealloc {
     [TheSocket removeDelegate:self];
@@ -52,7 +55,6 @@
     message.timestamp = [[NSDate alloc] init].timeIntervalSince1970;
     
     NSLog(@"要发送的消息为 message= %@",message);
-    
     [TheSocket sendMessage:message];
 }
 
@@ -72,6 +74,10 @@
 - (void)didReceiveOnManager:(MYSocketManager *)manager message:(MYMessage *)message {
     NSLog(@"message = %@",message);
     self.receiveLabel.text = message.content;
+}
+
++(NSString *)urlName {
+    return @"testpage";
 }
 
 @end

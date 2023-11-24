@@ -83,7 +83,7 @@
         [self.mainWindow makeKeyAndVisible];
     }];
 
-    NSString *apiAddress = @"172.16.92.120";
+    NSString *apiAddress = @"172.16.92.113";
     theNetworkManager.host = apiAddress;
     TheSocket.host = apiAddress;
     return YES;
