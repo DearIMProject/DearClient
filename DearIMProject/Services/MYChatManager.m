@@ -20,9 +20,15 @@ NSString *const CHAT_CONNECT_FAILURE = @"CHAT_CONNECT_FAILURE";
 
 @property (nonatomic, strong) NSMutableArray<id<MYChatManagerDelegate>> *delegateArray;
 
+@property (nonatomic, strong) NSTimer *timer;/**<  心跳机制 */
+
 @end
 
 @implementation MYChatManager
+
+- (void)dealloc {
+    [TheSocket removeDelegate:self];
+}
 
 static MYChatManager *__onetimeClass;
 + (instancetype)defaultChatManager {
@@ -47,7 +53,7 @@ static MYChatManager *__onetimeClass;
 }
 
 - (void)initChat {
-    //TODO: wmy
+    [TheSocket addDelegate:self];
 }
 
 - (void)addChatDelegate:(id<MYChatManagerDelegate>)delegate {
@@ -89,12 +95,18 @@ static MYChatManager *__onetimeClass;
         if (content.intValue == MAGIC_NUMBER) {
             //success
             [NSNotificationCenter.defaultCenter postNotificationName:CHAT_CONNECT_SUCCESS object:nil];
+            [self sendContext:TheUserManager.user.token toUser:nil withMsgType:MYMessageType_REQUEST_OFFLINE_MSGS];
         } else {
             //TODO: wmy 重试机制
             NSLog(@"connect failure:%@",content);
             [NSNotificationCenter.defaultCenter postNotificationName:CHAT_CONNECT_FAILURE object:nil];
         }
-    } else if (message.messageType == MYMessageType_CHAT_MESSAGE){
+    } else if (message.messageType == MYMessageType_REQUEST_OFFLINE_MSGS) {
+        [self clearHeartbeat];
+    } else if (message.messageType == MYMessageType_REQUEST_HEART_BEAT) {
+        [self resetHeartbeat];
+    } else if (message.messageType == MYMessageType_CHAT_MESSAGE) {
+        [self resetHeartbeat];
         for (id<MYChatManagerDelegate> delegate in self.delegateArray) {
             if ([delegate respondsToSelector:@selector(chatManager:didReceiveMessage:fromUser:)]) {
                 MYUser *user = [MYUser convertFromDBModel:[theChatUserManager chatPersonWithUserId:message.fromId]];
@@ -112,11 +124,32 @@ static MYChatManager *__onetimeClass;
     [TheSocket sendMessage:message];
 }
 
+#pragma mark - heart beat
+
+- (void)clearHeartbeat {
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(sendHeartbeat) object:nil];
+    [_timer timeInterval];
+    _timer = nil;
+}
+
+- (void)resetHeartbeat {
+    [self clearHeartbeat];
+    NSInteger stepTime = 5 * 60;
+    _timer = [NSTimer scheduledTimerWithTimeInterval:stepTime
+                                              target:self
+                                            selector:@selector(sendHeartbeat)
+                                            userInfo:nil repeats:YES];
+}
+
+- (void)sendHeartbeat {
+    MYMessage *message = [MYMessageFactory messageWithMesssageType:MYMessageType_REQUEST_HEART_BEAT];
+    [self sendContext:nil toUser:nil withMsgType:MYMessageType_REQUEST_HEART_BEAT];
+}
+
 #pragma mark - notification
 
 - (void)onReceiveLoginNotification {
     //1. 开启长连接
-    [TheSocket addDelegate:self];
     [TheSocket connect];
 }
 

@@ -24,6 +24,14 @@
 		180674272AF3868400175CB1 /* MYSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 180674262AF3868400175CB1 /* MYSocketManager.m */; };
 		1808F83B2B0DDE28001A2A68 /* MYUser+MYConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 1808F83A2B0DDE28001A2A68 /* MYUser+MYConvert.m */; };
 		1808F83E2B0EDF80001A2A68 /* MYMessage+MYConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 1808F83D2B0EDF80001A2A68 /* MYMessage+MYConvert.m */; };
+		1808F8462B1425F2001A2A68 /* MYAddressListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1808F8452B1425F2001A2A68 /* MYAddressListViewController.m */; };
+		1808F84D2B14264D001A2A68 /* MYAddressListDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1808F84C2B14264D001A2A68 /* MYAddressListDatasource.m */; };
+		1808F8502B14265B001A2A68 /* MYAddressListItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1808F84F2B14265B001A2A68 /* MYAddressListItemView.m */; };
+		1808F8532B14266A001A2A68 /* MYAddressViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1808F8522B14266A001A2A68 /* MYAddressViewModel.m */; };
+		1808F8572B14272B001A2A68 /* MYAddressService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1808F8562B14272B001A2A68 /* MYAddressService.m */; };
+		184D128B2B15CA3E0036F715 /* MYHeartBeatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D128A2B15CA3E0036F715 /* MYHeartBeatMessage.m */; };
+		184D128E2B15DA070036F715 /* MYRequestOfflineMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D128D2B15DA070036F715 /* MYRequestOfflineMessage.m */; };
+		184D12912B15E3420036F715 /* MYReadedMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D12902B15E3420036F715 /* MYReadedMessage.m */; };
 		1882D5462B05EA1900BC8AC3 /* MYChatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1882D5452B05EA1900BC8AC3 /* MYChatManager.m */; };
 		1882D5492B05EBAD00BC8AC3 /* MYLoginRequestMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1882D5482B05EBAD00BC8AC3 /* MYLoginRequestMessage.m */; };
 		1882D54C2B05EC7000BC8AC3 /* MYMessageFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1882D54B2B05EC7000BC8AC3 /* MYMessageFactory.m */; };
@@ -105,6 +113,22 @@
 		1808F83A2B0DDE28001A2A68 /* MYUser+MYConvert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MYUser+MYConvert.m"; sourceTree = "<group>"; };
 		1808F83C2B0EDF80001A2A68 /* MYMessage+MYConvert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MYMessage+MYConvert.h"; sourceTree = "<group>"; };
 		1808F83D2B0EDF80001A2A68 /* MYMessage+MYConvert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MYMessage+MYConvert.m"; sourceTree = "<group>"; };
+		1808F8442B1425F2001A2A68 /* MYAddressListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYAddressListViewController.h; sourceTree = "<group>"; };
+		1808F8452B1425F2001A2A68 /* MYAddressListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYAddressListViewController.m; sourceTree = "<group>"; };
+		1808F84B2B14264D001A2A68 /* MYAddressListDatasource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYAddressListDatasource.h; sourceTree = "<group>"; };
+		1808F84C2B14264D001A2A68 /* MYAddressListDatasource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYAddressListDatasource.m; sourceTree = "<group>"; };
+		1808F84E2B14265B001A2A68 /* MYAddressListItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYAddressListItemView.h; sourceTree = "<group>"; };
+		1808F84F2B14265B001A2A68 /* MYAddressListItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYAddressListItemView.m; sourceTree = "<group>"; };
+		1808F8512B14266A001A2A68 /* MYAddressViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYAddressViewModel.h; sourceTree = "<group>"; };
+		1808F8522B14266A001A2A68 /* MYAddressViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYAddressViewModel.m; sourceTree = "<group>"; };
+		1808F8552B14272B001A2A68 /* MYAddressService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYAddressService.h; sourceTree = "<group>"; };
+		1808F8562B14272B001A2A68 /* MYAddressService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYAddressService.m; sourceTree = "<group>"; };
+		184D12892B15CA3D0036F715 /* MYHeartBeatMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYHeartBeatMessage.h; sourceTree = "<group>"; };
+		184D128A2B15CA3E0036F715 /* MYHeartBeatMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYHeartBeatMessage.m; sourceTree = "<group>"; };
+		184D128C2B15DA070036F715 /* MYRequestOfflineMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYRequestOfflineMessage.h; sourceTree = "<group>"; };
+		184D128D2B15DA070036F715 /* MYRequestOfflineMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYRequestOfflineMessage.m; sourceTree = "<group>"; };
+		184D128F2B15E3420036F715 /* MYReadedMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYReadedMessage.h; sourceTree = "<group>"; };
+		184D12902B15E3420036F715 /* MYReadedMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYReadedMessage.m; sourceTree = "<group>"; };
 		1882D5442B05EA1900BC8AC3 /* MYChatManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYChatManager.h; sourceTree = "<group>"; };
 		1882D5452B05EA1900BC8AC3 /* MYChatManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYChatManager.m; sourceTree = "<group>"; };
 		1882D5472B05EBAD00BC8AC3 /* MYLoginRequestMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYLoginRequestMessage.h; sourceTree = "<group>"; };
@@ -276,6 +300,7 @@
 		180674112AF37E4000175CB1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1808F8432B1425D6001A2A68 /* Address */,
 				1882D55D2B06F39C00BC8AC3 /* Profile */,
 				1882D5502B06131100BC8AC3 /* Chat */,
 				180674122AF37F2E00175CB1 /* MYHomeViewController.h */,
@@ -322,6 +347,55 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		1808F8432B1425D6001A2A68 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				1808F8542B14271C001A2A68 /* Services */,
+				1808F84A2B142634001A2A68 /* Datasources */,
+				1808F8492B142627001A2A68 /* ItemViews */,
+				1808F8482B142609001A2A68 /* ViewModels */,
+				1808F8442B1425F2001A2A68 /* MYAddressListViewController.h */,
+				1808F8452B1425F2001A2A68 /* MYAddressListViewController.m */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		1808F8482B142609001A2A68 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1808F8512B14266A001A2A68 /* MYAddressViewModel.h */,
+				1808F8522B14266A001A2A68 /* MYAddressViewModel.m */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1808F8492B142627001A2A68 /* ItemViews */ = {
+			isa = PBXGroup;
+			children = (
+				1808F84E2B14265B001A2A68 /* MYAddressListItemView.h */,
+				1808F84F2B14265B001A2A68 /* MYAddressListItemView.m */,
+			);
+			path = ItemViews;
+			sourceTree = "<group>";
+		};
+		1808F84A2B142634001A2A68 /* Datasources */ = {
+			isa = PBXGroup;
+			children = (
+				1808F84B2B14264D001A2A68 /* MYAddressListDatasource.h */,
+				1808F84C2B14264D001A2A68 /* MYAddressListDatasource.m */,
+			);
+			path = Datasources;
+			sourceTree = "<group>";
+		};
+		1808F8542B14271C001A2A68 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1808F8552B14272B001A2A68 /* MYAddressService.h */,
+				1808F8562B14272B001A2A68 /* MYAddressService.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		1882D5422B05E95400BC8AC3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,6 +416,12 @@
 				1882D5482B05EBAD00BC8AC3 /* MYLoginRequestMessage.m */,
 				1882D54D2B05ECFB00BC8AC3 /* MYChatMessage.h */,
 				1882D54E2B05ECFB00BC8AC3 /* MYChatMessage.m */,
+				184D12892B15CA3D0036F715 /* MYHeartBeatMessage.h */,
+				184D128A2B15CA3E0036F715 /* MYHeartBeatMessage.m */,
+				184D128C2B15DA070036F715 /* MYRequestOfflineMessage.h */,
+				184D128D2B15DA070036F715 /* MYRequestOfflineMessage.m */,
+				184D128F2B15E3420036F715 /* MYReadedMessage.h */,
+				184D12902B15E3420036F715 /* MYReadedMessage.m */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -732,6 +812,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1808F83B2B0DDE28001A2A68 /* MYUser+MYConvert.m in Sources */,
+				1808F8532B14266A001A2A68 /* MYAddressViewModel.m in Sources */,
 				1882D5492B05EBAD00BC8AC3 /* MYLoginRequestMessage.m in Sources */,
 				180673EF2AF34D6300175CB1 /* MYUser.m in Sources */,
 				18F5E5EA2B0CAACB00B5C063 /* MYChatAnotherMessageItemView.m in Sources */,
@@ -740,7 +821,10 @@
 				180673F72AF34FC400175CB1 /* MYApplicationManager.m in Sources */,
 				1882D54C2B05EC7000BC8AC3 /* MYMessageFactory.m in Sources */,
 				180673E62AF34B2600175CB1 /* MYUserManager.m in Sources */,
+				184D12912B15E3420036F715 /* MYReadedMessage.m in Sources */,
 				180674142AF37F2E00175CB1 /* MYHomeViewController.m in Sources */,
+				1808F8462B1425F2001A2A68 /* MYAddressListViewController.m in Sources */,
+				1808F84D2B14264D001A2A68 /* MYAddressListDatasource.m in Sources */,
 				1882D57E2B0711EB00BC8AC3 /* MYChatMessageViewModel.m in Sources */,
 				18F5E5EE2B0D8C2B00B5C063 /* MYChatTextView.m in Sources */,
 				1882D5552B06134300BC8AC3 /* MYChatPersonViewModel.m in Sources */,
@@ -751,15 +835,19 @@
 				1806740A2AF3751D00175CB1 /* MYNetworkManager.m in Sources */,
 				180673F32AF34F6600175CB1 /* MYViewController+MYRouter.m in Sources */,
 				1882D57B2B0711AD00BC8AC3 /* MYChatMessageDataSource.m in Sources */,
+				184D128E2B15DA070036F715 /* MYRequestOfflineMessage.m in Sources */,
 				DEC9D96A2ABD8CB9007BB24F /* AppDelegate.m in Sources */,
 				1882D5812B07121400BC8AC3 /* MYChatMeMessageItemView.m in Sources */,
 				18C067472AF492D900C3DE3D /* MYProfileViewController.m in Sources */,
+				184D128B2B15CA3E0036F715 /* MYHeartBeatMessage.m in Sources */,
 				1882D5752B07075500BC8AC3 /* MYChatPersonItemView.m in Sources */,
 				18C067412AF4926D00C3DE3D /* MYHomeTabbarViewController.m in Sources */,
+				1808F8572B14272B001A2A68 /* MYAddressService.m in Sources */,
 				18CCD2A62AD29667000BEBB7 /* MYLoginViewController.m in Sources */,
 				1882D5672B06F50000BC8AC3 /* MYProfileDataSource.m in Sources */,
 				1806741C2AF37FCB00175CB1 /* MYTestChatViewController.m in Sources */,
 				DEC9D97B2ABD8CBA007BB24F /* main.m in Sources */,
+				1808F8502B14265B001A2A68 /* MYAddressListItemView.m in Sources */,
 				180674272AF3868400175CB1 /* MYSocketManager.m in Sources */,
 				1882D56E2B06F70000BC8AC3 /* MYProfileItemViewModel.m in Sources */,
 				180674032AF370D600175CB1 /* MYRegisterViewController.m in Sources */,

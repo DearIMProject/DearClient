@@ -30,6 +30,8 @@ FOUNDATION_EXPORT NSString *const CHAT_CONNECT_FAILURE;
 - (void)chatManager:(MYChatManager *)manager didReceiveMessage:(MYMessage *)message fromUser:(MYUser *)user;
 - (void)chatManager:(MYChatManager *)manager sendMessageSuccessWithTag:(long)tag;
 
+- (void)chatManager:(MYChatManager *)manager onReceiveOfflineManager:(NSArray<MYMessage *> *)messages;
+
 @end
 
 
@@ -39,7 +41,7 @@ FOUNDATION_EXPORT NSString *const CHAT_CONNECT_FAILURE;
 
 - (void)initChat;
 
-- (void)sendContext:(NSString *)content toUser:(MYUser *)user withMsgType:(MYMessageType)msgType;
+- (void)sendContext:(nullable NSString  *)content toUser:(nullable MYUser *)user withMsgType:(MYMessageType)msgType;
 
 - (void)addChatDelegate:(id<MYChatManagerDelegate>)delegate;
 

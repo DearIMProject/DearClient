@@ -143,6 +143,11 @@
     _limit+=length;
 }
 
+- (void)writeData:(NSData *)data {
+    _limit += data.length;
+    [self.data appendData:data];
+}
+
 - (void)writeString:(NSString *)string {
     NSUInteger length = [string lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
     NSRange range = NSMakeRange(0, length);
@@ -154,12 +159,16 @@
 }
 
 - (NSString *)readStringWithLength:(NSUInteger)length {
+    NSString *str = [[self readDataWithLength:length] convertedToUtf8String];
+    return str;
+}
+
+- (NSData *)readDataWithLength:(NSInteger)length {
     Byte bytes[length];
     [self.data getBytes:bytes range:NSMakeRange(self.position, length)];
     _position += length;
     NSData *resultData = [[NSData alloc] initWithBytes:bytes length:length];
-    NSString *str = [resultData convertedToUtf8String];
-    return str;
+    return resultData;
 }
 
 - (NSData *)readAll {
@@ -170,6 +179,11 @@
 - (void)reset {
     self.position = 0;
     self.limit = 0;
+}
+
+- (void)clear {
+    [self reset];
+    _data = [NSMutableData dataWithCapacity:self.maxCapacity];
 }
 
 - (int)maxCapacity {

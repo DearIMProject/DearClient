@@ -12,7 +12,7 @@
 - (instancetype)initWithCoder:(NSCoder *)coder {
     if (self = [super init]) {
         self.userId = [coder decodeInt64ForKey:@"userId"];
-        self.name = [coder decodeObjectForKey:@"name"];
+        self.username = [coder decodeObjectForKey:@"name"];
         self.email = [coder decodeObjectForKey:@"email"];
         self.os = [coder decodeObjectForKey:@"os"];
         self.token = [coder decodeObjectForKey:@"token"];
@@ -23,7 +23,7 @@
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [aCoder encodeInteger:self.userId forKey:@"userId"];
-    [aCoder encodeObject:self.name forKey:@"name"];
+    [aCoder encodeObject:self.username forKey:@"name"];
     [aCoder encodeObject:self.email forKey:@"email"];
     [aCoder encodeObject:self.os forKey:@"os"];
     [aCoder encodeObject:self.token forKey:@"token"];

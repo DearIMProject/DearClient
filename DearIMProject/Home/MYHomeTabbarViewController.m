@@ -9,11 +9,13 @@
 #import <MYMVVM/MYMVVM.h>
 #import "MYProfileViewController.h"
 #import "MYChatPersonListViewController.h"
+#import "MYAddressListViewController.h"
 
 @interface MYHomeTabbarViewController () <UITabBarControllerDelegate>
 
 @property (nonatomic, strong) MYChatPersonListViewController *chatVC;/**<  聊天界面 */
 @property (nonatomic, strong) MYProfileViewController *profileVC;/**<  我的 */
+@property (nonatomic, strong) MYAddressListViewController *addressListVC;
 
 @end
 
@@ -21,8 +23,12 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        self.viewControllers = @[self.chatVC,self.profileVC];
+        _chatVC = [[MYChatPersonListViewController alloc] init];
+        _profileVC = [[MYProfileViewController alloc] init];
+        _addressListVC = [[MYAddressListViewController alloc] init];
+        self.viewControllers = @[self.chatVC,self.addressListVC,self.profileVC];
         [self addChildViewController:self.chatVC];
+        [self addChildViewController:self.addressListVC];
         [self addChildViewController:self.profileVC];
         self.title = self.chatVC.title;
     }
@@ -54,20 +60,6 @@
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
     self.title = viewController.title;
-}
-
-- (MYChatPersonListViewController *)chatVC {
-    if (!_chatVC) {
-        _chatVC = [[MYChatPersonListViewController alloc] init];
-    }
-    return _chatVC;
-}
-
-- (MYProfileViewController *)profileVC {
-    if (!_profileVC) {
-        _profileVC = [[MYProfileViewController alloc] init];
-    }
-    return _profileVC;
 }
 
 @end

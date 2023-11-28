@@ -12,8 +12,8 @@
 + (instancetype)convertFromDBModel:(MYDBUser *)dbModel {
     MYUser *user = [[MYUser alloc] init];
     user.userId = dbModel.userId;
-    user.name = dbModel.name;
-    user.iconURL = dbModel.iconURL;
+    user.username = dbModel.name;
+    user.icon = dbModel.iconURL;
     return user;
 }
 

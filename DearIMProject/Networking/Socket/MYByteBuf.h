@@ -34,12 +34,17 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)writeString:(NSString *)string;
 - (NSString *)readStringWithLength:(NSUInteger)length;
 
+- (NSData *)readDataWithLength:(NSInteger)length;
+
 
 - (void)writeBytes:(Byte *)bytes length:(NSUInteger)length;
+- (void)writeData:(NSData *)data;
 
 - (NSData *)readAll;
 
 - (void)reset;
+
+- (void)clear;
 
 - (int)length;
 

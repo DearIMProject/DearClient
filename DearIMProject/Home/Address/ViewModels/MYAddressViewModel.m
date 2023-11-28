@@ -1,18 +1,19 @@
 //
-//  MYChatPersonViewModel.m
+//  MYAddressViewModel.m
 //  DearIMProject
 //
-//  Created by APPLE on 2023/11/16.
+//  Created by APPLE on 2023/11/27.
 //
 
-#import "MYChatPersonViewModel.h"
+#import "MYAddressViewModel.h"
 #import "MYUser+MYConvert.h"
 
-@implementation MYChatPersonViewModel
+@implementation MYAddressViewModel
+
 @dynamic model;
 
 - (Class)itemViewClass {
-    return NSClassFromString(@"MYChatPersonItemView");
+    return NSClassFromString(@"MYAddressListItemView");
 }
 
 - (CGSize)itemSize {

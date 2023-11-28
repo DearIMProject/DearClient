@@ -9,7 +9,9 @@
 #import "MYLoginRequestMessage.h"
 #import "MYChatMessage.h"
 #import "MYUserManager.h"
-
+#import "MYHeartBeatMessage.h"
+#import "MYRequestOfflineMessage.h"
+#import "MYReadedMessage.h"
 
 @implementation MYMessageFactory
 + (MYMessage *)messageWithMesssageType:(MYMessageType)msgType {
@@ -25,6 +27,14 @@
         case MYMessageType_REQUEST_LOGIN:
             message = [[MYLoginRequestMessage alloc] init];
             break;
+        case MYMessageType_REQUEST_HEART_BEAT:
+            message = [[MYHeartBeatMessage alloc] init];
+            break;
+        case MYMessageType_REQUEST_OFFLINE_MSGS:
+            message = [[MYRequestOfflineMessage alloc] init];
+            break;
+        case MYMessageType_READED_MESSAGE:
+            message = [[MYReadedMessage alloc] init];
         default:
             break;
     }

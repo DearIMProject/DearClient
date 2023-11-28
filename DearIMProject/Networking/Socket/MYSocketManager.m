@@ -8,12 +8,14 @@
 #import "MYSocketManager.h"
 #import <CocoaAsyncSocket/GCDAsyncSocket.h>
 #import "MYMessageCodec.h"
+#import "MYByteBuf.h"
 
 @interface MYSocketManager () <GCDAsyncSocketDelegate>
 
 @property (nonatomic, strong) GCDAsyncSocket *asyncSocket;
 @property (nonatomic, strong) NSMutableArray<id<MYSocketManagerDelegate>> *delegates;
 @property (nonatomic, strong) MYMessageCodec *msgCodec;
+@property (nonatomic, strong) MYByteBuf *readBuf;/**<  读取的数据 */
 
 @end
 
@@ -35,6 +37,7 @@ static MYSocketManager *__onetimeClass;
         _delegates = [NSMutableArray array];
         _host = @"127.0.0.1";
         _port = 9999;
+        _readBuf = [[MYByteBuf alloc] initWithCapacity:100];
     }
     return self;
 }
@@ -110,12 +113,31 @@ static MYSocketManager *__onetimeClass;
 
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag {
     NSLog(@"😯接收到data: %@",data);
+    Byte bytes[data.length];
+    [data getBytes:bytes length:data.length];
+    [self.readBuf writeBytes:bytes length:data.length];
+    while (self.readBuf.length > 4) {// 长度为4
+        int length = [self.readBuf readInt];
+        if (self.readBuf.length >= length + 4) { // 粘包
+            NSData *bodyData = [self.readBuf readDataWithLength:length];
+            [self receiveData:bodyData];
+            NSData *restData = [self.readBuf readDataWithLength:self.readBuf.length - length - 4];
+            [self.readBuf clear];
+            [self.readBuf writeData:restData];
+        } else  { // 半包
+            [sock readDataWithTimeout:-1 buffer:self.readBuf.readAll.mutableCopy bufferOffset:self.readBuf.length tag:0];
+            return;
+        }
+    }
+    [sock readDataWithTimeout:-1 buffer:self.readBuf.readAll.mutableCopy bufferOffset:self.readBuf.length tag:0];
+}
+
+- (void)receiveData:(NSData *)data {
     for (id<MYSocketManagerDelegate> delegate in self.delegates) {
-        if ([delegate respondsToSelector:@selector(didReceiveOnManager:message:)]) {            
+        if ([delegate respondsToSelector:@selector(didReceiveOnManager:message:)]) {
             [delegate didReceiveOnManager:self message:[self.msgCodec decodeWithData:data]];
         }
     }
-    [sock readDataWithTimeout:-1 tag:0];
 }
 
 - (void)socket:(GCDAsyncSocket *)sock didReadPartialDataOfLength:(NSUInteger)partialLength tag:(long)tag {

@@ -5,7 +5,7 @@
 //  Created by APPLE on 2023/11/2.
 //
 
-#import "MYViewController+MYRouter.h"
+#import <MYMVVM/MYMVVM.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
