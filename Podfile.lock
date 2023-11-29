@@ -15,6 +15,9 @@ PODS:
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
   - CocoaAsyncSocket (7.6.5)
+  - CocoaLumberjack (3.8.2):
+    - CocoaLumberjack/Core (= 3.8.2)
+  - CocoaLumberjack/Core (3.8.2)
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
@@ -24,6 +27,23 @@ PODS:
   - MJRefresh (3.7.6)
   - MYClientDatabase (0.1.0):
     - FMDB
+  - MYDearAddress (0.1.0):
+    - MYNetwork
+  - MYDearApplication (0.1.0):
+    - MYNetwork
+  - MYDearBusiness (0.1.0):
+    - MYNetwork
+    - MYRouter
+  - MYDearChat (0.1.0):
+    - MYNetwork
+  - MYDearHome (0.1.0):
+    - MYNetwork
+  - MYDearLogin (0.1.0):
+    - MYNetwork
+  - MYDearProfile (0.1.0):
+    - MYNetwork
+  - MYDearUser (0.1.0):
+    - MYNetwork
   - MYIconfont (0.1.0)
   - MYImageCache (0.1.0):
     - SDWebImage
@@ -34,11 +54,15 @@ PODS:
     - MYRouter
     - MYSkin
     - MYUtils
+  - MYNetwork (0.1.0):
+    - AFNetworking
+    - MYUtils
   - MYRouter (0.1.0)
   - MYSkin (0.1.0):
     - YYModel
   - MYUIKit (0.1.0)
   - MYUtils (0.1.0):
+    - CocoaLumberjack
     - MBProgressHUD
     - ReactiveObjC
   - ReactiveObjC (3.1.1)
@@ -53,9 +77,18 @@ DEPENDENCIES:
   - IQKeyboardManager
   - MJRefresh
   - MYClientDatabase (from `../MYClientDatabase`)
+  - MYDearAddress (from `../MYDearBusiness`)
+  - MYDearApplication (from `../MYDearBusiness`)
+  - MYDearBusiness (from `../MYDearBusiness`)
+  - MYDearChat (from `../MYDearBusiness`)
+  - MYDearHome (from `../MYDearBusiness`)
+  - MYDearLogin (from `../MYDearBusiness`)
+  - MYDearProfile (from `../MYDearBusiness`)
+  - MYDearUser (from `../MYDearBusiness`)
   - MYIconfont (from `https://github.com/MYBasicUtils/MYIconfont.git`)
   - MYImageCache (from `/Users/apple/Developer/iOS/MYImageCache`)
   - MYMVVM (from `/Users/apple/Developer/iOS/MYMVVM`)
+  - MYNetwork (from `../MYNetwork`)
   - MYRouter (from `/Users/apple/Developer/iOS/MYRouter`)
   - MYSkin (from `/Users/apple/Developer/iOS/MYSkin`)
   - MYUIKit (from `../MYUIKit`)
@@ -65,6 +98,7 @@ SPEC REPOS:
   trunk:
     - AFNetworking
     - CocoaAsyncSocket
+    - CocoaLumberjack
     - FMDB
     - IQKeyboardManager
     - Masonry
@@ -77,12 +111,30 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   MYClientDatabase:
     :path: "../MYClientDatabase"
+  MYDearAddress:
+    :path: "../MYDearBusiness"
+  MYDearApplication:
+    :path: "../MYDearBusiness"
+  MYDearBusiness:
+    :path: "../MYDearBusiness"
+  MYDearChat:
+    :path: "../MYDearBusiness"
+  MYDearHome:
+    :path: "../MYDearBusiness"
+  MYDearLogin:
+    :path: "../MYDearBusiness"
+  MYDearProfile:
+    :path: "../MYDearBusiness"
+  MYDearUser:
+    :path: "../MYDearBusiness"
   MYIconfont:
     :git: https://github.com/MYBasicUtils/MYIconfont.git
   MYImageCache:
     :path: "/Users/apple/Developer/iOS/MYImageCache"
   MYMVVM:
     :path: "/Users/apple/Developer/iOS/MYMVVM"
+  MYNetwork:
+    :path: "../MYNetwork"
   MYRouter:
     :path: "/Users/apple/Developer/iOS/MYRouter"
   MYSkin:
@@ -100,23 +152,33 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
+  CocoaLumberjack: f8d89a516e7710fdb2e9b8f1560b16ec6040eef0
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   IQKeyboardManager: 024b54d7dcb765c5bc99882cb4d5ea24a8cb7c3c
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 2fe7fb43a5167ceda20bb7e63f130c04fd1814a5
-  MYClientDatabase: d0f9ad765dda58c73018a950f99a7c76a213f742
+  MYClientDatabase: cc1fd85fd7cf6212e21b301f3818c34c143db01d
+  MYDearAddress: 3c3e183796c93ea0f8eac18329d0da28ebe9a5bf
+  MYDearApplication: 4f9d5d4458cd9bf8ee908d5643efc886b3c7f147
+  MYDearBusiness: bc348cda7e2640b0f9f63caca54ec8ecc630ce66
+  MYDearChat: 3cca47e1d4ea429c0f09ed12209c7762b746ad4b
+  MYDearHome: 9f8e5e7ec0c681db466736f8fdedfa58cb8ed660
+  MYDearLogin: d3383ba8d8ba0829602b1c112cc8657cf55c313d
+  MYDearProfile: 27076c2f50a08ee4e07a39cd78558f292979db2d
+  MYDearUser: ce50b3633ccca98bca49a436855c34fcc29eaa22
   MYIconfont: a328b874d9605267828243ec224fe56949dc90d4
   MYImageCache: 3910c515f53da3f8fc5322ba3226506230176f8e
   MYMVVM: 9d4d6c6ec04a8af8c9867ede6146c21674c395d0
+  MYNetwork: dd9d421ef788a9c1e1038ba29e2aa9558cd09e9f
   MYRouter: e83ca93fb3d2aab45d4ece6e67e12c165b6486fa
   MYSkin: b40195bbfcbf0502a279f052005532e6289d5974
-  MYUIKit: ed424ef4901947404845ca85c99f9fea2eea3a1d
-  MYUtils: 1442f43627aec8fabf7b2f9ebb8c6be4ca687917
+  MYUIKit: 62948cfe21a44e154c109c3b6f33657a7955d269
+  MYUtils: 437842c8d11d52b2912851be259e642d32e0fb62
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SDWebImage: 7ac2b7ddc5e8484c79aa90fc4e30b149d6a2c88f
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 82cbf62af7e0e3d7c6226af07eb80f16189d2b21
+PODFILE CHECKSUM: 4510643c93639b71b6999f5c124400ffe0797ec2
 
 COCOAPODS: 1.14.3

@@ -26,7 +26,18 @@ target 'DearIMProject' do
   pod 'MYClientDatabase', :path => '../MYClientDatabase'
 
   pod 'MYUIKit', :path => '../MYUIKit'
+  
+  pod 'MYNetwork', :path => '../MYNetwork'
 
+  pod 'MYDearBusiness', :path =>'../MYDearBusiness'
+  pod 'MYDearUser', :path =>'../MYDearBusiness'
+  pod 'MYDearApplication', :path =>'../MYDearBusiness'
+  pod 'MYDearLogin', :path =>'../MYDearBusiness'
+  pod 'MYDearHome', :path =>'../MYDearBusiness'
+  pod 'MYDearProfile', :path =>'../MYDearBusiness'
+  pod 'MYDearChat', :path =>'../MYDearBusiness'
+  pod 'MYDearAddress', :path =>'../MYDearBusiness'
+  
   pod 'AFNetworking'
   pod 'CocoaAsyncSocket'
   pod 'MJRefresh'

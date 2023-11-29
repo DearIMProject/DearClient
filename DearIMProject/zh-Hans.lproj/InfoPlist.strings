@@ -2,3 +2,12 @@
 "profile" = "我的";
 "login_success" = "登录成功";
 "logout" = "退出登录";
+"input_securimy_code" = "请输入验证码";
+"sure" = "确定";
+"send security code" = "发送验证码";
+"forget_password" = "忘记密码";
+"has_no_accrount" = "没有账号？";
+"login" = "登录";
+"input_email" = "请输入邮箱";
+"input_password" = "请输入密码";
+"login success" = "登录成功";

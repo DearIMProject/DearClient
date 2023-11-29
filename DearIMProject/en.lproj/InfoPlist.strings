@@ -2,3 +2,6 @@
 "profile" = "我的";
 "login_success" = "登录成功";
 "logout" = "退出登录";
+"input_securimy_code" = "请输入验证码";
+"sure" = "确定";
+"send security code" = "发送验证码";
