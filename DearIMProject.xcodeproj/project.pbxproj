@@ -31,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		1048B87D285A5086BD8328FE /* libPods-DearIMProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DearIMProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1862EE002B19CF1300D4478B /* DearIMProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DearIMProject.entitlements; sourceTree = "<group>"; };
 		18C067482AF4937700C3DE3D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		18C067492AF4937800C3DE3D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		18C0674A2AF4937D00C3DE3D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -123,6 +124,7 @@
 		DEC9D9672ABD8CB9007BB24F /* DearIMProject */ = {
 			isa = PBXGroup;
 			children = (
+				1862EE002B19CF1300D4478B /* DearIMProject.entitlements */,
 				180674112AF37E4000175CB1 /* Home */,
 				DEC9D9682ABD8CB9007BB24F /* AppDelegate.h */,
 				DEC9D9692ABD8CB9007BB24F /* AppDelegate.m */,
@@ -508,6 +510,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DearIMProject/DearIMProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YU53J7686A;
@@ -539,6 +542,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DearIMProject/DearIMProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YU53J7686A;
