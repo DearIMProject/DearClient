@@ -183,16 +183,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2A3B1E50-E790-4765-B4A2-025C5D46D5FC"
+            uuid = "25AA255B-F237-42E3-9C55-A9545EEF38C2"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../MYDearBusiness/MYDearUser/Classes/Services/MYLoginService.m"
+            filePath = "../MYDearBusiness/MYDearChat/Classes/DataSources/MYChatMessageDataSource.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "-autoLoginWithSuccess:failure:"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "-successMessageWithTag:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4F31FCA5-6CEA-4890-BB27-D932456572A5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../MYDearBusiness/MYDearProfile/Classes/DataSources/MYProfileDataSource.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "-sendLog"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

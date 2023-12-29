@@ -42,6 +42,8 @@ PODS:
     - MYNetwork
   - MYDearProfile (0.1.0):
     - MYNetwork
+  - MYDearUpload (0.1.0):
+    - MYNetwork
   - MYDearUser (0.1.0):
     - MYNetwork
   - MYIconfont (0.1.0)
@@ -68,9 +70,9 @@ PODS:
     - ReactiveObjC
   - Reachability (3.2)
   - ReactiveObjC (3.1.1)
-  - SDWebImage (5.18.5):
-    - SDWebImage/Core (= 5.18.5)
-  - SDWebImage/Core (5.18.5)
+  - SDWebImage (5.18.8):
+    - SDWebImage/Core (= 5.18.8)
+  - SDWebImage/Core (5.18.8)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
@@ -86,6 +88,7 @@ DEPENDENCIES:
   - MYDearHome (from `../MYDearBusiness`)
   - MYDearLogin (from `../MYDearBusiness`)
   - MYDearProfile (from `../MYDearBusiness`)
+  - MYDearUpload (from `../MYDearUpload`)
   - MYDearUser (from `../MYDearBusiness`)
   - MYIconfont (from `https://github.com/MYBasicUtils/MYIconfont.git`)
   - MYImageCache (from `/Users/apple/Developer/iOS/MYImageCache`)
@@ -128,6 +131,8 @@ EXTERNAL SOURCES:
     :path: "../MYDearBusiness"
   MYDearProfile:
     :path: "../MYDearBusiness"
+  MYDearUpload:
+    :path: "../MYDearUpload"
   MYDearUser:
     :path: "../MYDearBusiness"
   MYIconfont:
@@ -169,6 +174,7 @@ SPEC CHECKSUMS:
   MYDearHome: 9f8e5e7ec0c681db466736f8fdedfa58cb8ed660
   MYDearLogin: d3383ba8d8ba0829602b1c112cc8657cf55c313d
   MYDearProfile: 0b41cd00e7773449c8a2f7571c395b94dff61a31
+  MYDearUpload: 706dab936edd634cb0b71d1d104b430b91733dcc
   MYDearUser: ce50b3633ccca98bca49a436855c34fcc29eaa22
   MYIconfont: a328b874d9605267828243ec224fe56949dc90d4
   MYImageCache: 3910c515f53da3f8fc5322ba3226506230176f8e
@@ -180,9 +186,9 @@ SPEC CHECKSUMS:
   MYUtils: 437842c8d11d52b2912851be259e642d32e0fb62
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
-  SDWebImage: 7ac2b7ddc5e8484c79aa90fc4e30b149d6a2c88f
+  SDWebImage: a81bbb3ba4ea5f810f4069c68727cb118467a04a
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 4510643c93639b71b6999f5c124400ffe0797ec2
+PODFILE CHECKSUM: 61d2136647bf83513387138434ede620652c1289
 
 COCOAPODS: 1.14.3

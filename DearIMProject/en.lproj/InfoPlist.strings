@@ -5,3 +5,5 @@
 "input_securimy_code" = "请输入验证码";
 "sure" = "确定";
 "send security code" = "发送验证码";
+"send_log" = "发送日志";
+"send_success" = "发送成功";

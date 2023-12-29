@@ -38,6 +38,10 @@ target 'DearIMProject' do
   pod 'MYDearChat', :path =>'../MYDearBusiness'
   pod 'MYDearAddress', :path =>'../MYDearBusiness'
   
+  
+  pod 'MYDearUpload', :path => '../MYDearUpload'
+  
+  
   pod 'AFNetworking'
   pod 'CocoaAsyncSocket'
   pod 'MJRefresh'
