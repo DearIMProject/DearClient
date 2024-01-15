@@ -30,6 +30,9 @@ target 'DearIMProject' do
   pod 'MYNetwork', :path => '../MYNetwork'
 
   pod 'MYDearBusiness', :path =>'../MYDearBusiness'
+  pod 'MYDearBusiness/Debug', :path =>'../MYDearBusiness'
+  
+  
   pod 'MYDearUser', :path =>'../MYDearBusiness'
   pod 'MYDearApplication', :path =>'../MYDearBusiness'
   pod 'MYDearLogin', :path =>'../MYDearBusiness'
@@ -37,9 +40,12 @@ target 'DearIMProject' do
   pod 'MYDearProfile', :path =>'../MYDearBusiness'
   pod 'MYDearChat', :path =>'../MYDearBusiness'
   pod 'MYDearAddress', :path =>'../MYDearBusiness'
+  pod 'MYDearDebug', :path =>'../MYDearBusiness'
   
   
   pod 'MYDearUpload', :path => '../MYDearUpload'
+  
+  
   
   
   pod 'AFNetworking'

@@ -7,7 +7,6 @@
 
 #import "SceneDelegate.h"
 #import <MYMVVM/MYMVVM.h>
-#import "ViewController.h"
 #import "MYApplicationManager.h"
 
 @interface SceneDelegate ()
