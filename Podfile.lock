@@ -27,6 +27,10 @@ PODS:
   - MJRefresh (3.7.6)
   - MYClientDatabase (0.1.0):
     - FMDB
+    - MYClientDatabase/Debug (= 0.1.0)
+  - MYClientDatabase/Debug (0.1.0):
+    - FMDB
+    - MYDearDebug
   - MYDearAddress (0.1.0):
     - MYNetwork
   - MYDearApplication (0.1.0):
@@ -91,6 +95,7 @@ DEPENDENCIES:
   - IQKeyboardManager
   - MJRefresh
   - MYClientDatabase (from `../MYClientDatabase`)
+  - MYClientDatabase/Debug (from `../MYClientDatabase`)
   - MYDearAddress (from `../MYDearBusiness`)
   - MYDearApplication (from `../MYDearBusiness`)
   - MYDearBusiness (from `../MYDearBusiness`)
@@ -180,7 +185,7 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 2fe7fb43a5167ceda20bb7e63f130c04fd1814a5
-  MYClientDatabase: 0b0df2a3086fc72f1ed44c763602b1430d769614
+  MYClientDatabase: 0052e0552f92817dc4b05bf5640404d290343466
   MYDearAddress: 18a16878a145fbd20b731cdc865ce1df89314f99
   MYDearApplication: 940a854f9d2726e3e6dd75d2c0b0d1704ed3ba84
   MYDearBusiness: 68a76dd72faf7af465332e8e86a353ee03c2699a
@@ -204,6 +209,6 @@ SPEC CHECKSUMS:
   SDWebImage: a81bbb3ba4ea5f810f4069c68727cb118467a04a
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 23a33bfd738ee482acf4b7e6b5e0ff6056207a76
+PODFILE CHECKSUM: 0473392daf7af5e3553cc95636cd80c2bcffe8b8
 
 COCOAPODS: 1.14.3

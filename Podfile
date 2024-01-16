@@ -24,7 +24,8 @@ target 'DearIMProject' do
 
   #  pod 'MYClientDatabase', :git => 'https://github.com/DearIMProject/MYClientDatabase.git'
   pod 'MYClientDatabase', :path => '../MYClientDatabase'
-
+  pod 'MYClientDatabase/Debug', :path =>'../MYClientDatabase'
+  
   pod 'MYUIKit', :path => '../MYUIKit'
   
   pod 'MYNetwork', :path => '../MYNetwork'
