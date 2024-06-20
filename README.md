@@ -1,3 +1,3 @@
 # DearClient
-展信佳App客户端
+IM App客户端 by OC
 
